@@ -182,3 +182,7 @@ def export_articles_dataset(db = Depends(get_db)):
              df[col] = df[col].astype(bool)
     dataset = Dataset.from_pandas(df)
     return dataset.to_dict()
+
+if __name__ == "__main__":
+    import uvicorn
+    uvicorn.run(app, host="0.0.0.0", port=8000)
