@@ -7,3 +7,4 @@ pyarrow
 datasets
 mysql
 mysql-connector-python
+requests

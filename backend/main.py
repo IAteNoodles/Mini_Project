@@ -9,6 +9,7 @@ from datasets import Dataset
 import io
 import mysql.connector
 from mysql.connector import Error
+import requests
 
 # --- Database Credentials ---
 hostname = "76b2td.h.filess.io"
@@ -180,6 +181,18 @@ def export_articles_dataset(db = Depends(get_db)):
              df[col] = df[col].astype(bool)
     dataset = Dataset.from_pandas(df)
     return dataset.to_dict()
+
+@app.get("/news")
+def get_news(q: str):
+    news_api_key = "8f51adebb6f54e3da3861e73e3efa150"
+    url = f"https://newsapi.org/v2/everything?q={q}&apiKey={news_api_key}"
+    try:
+        response = requests.get(url)
+        response.raise_for_status()
+        return response.json()
+    except requests.exceptions.RequestException as e:
+        raise HTTPException(status_code=503, detail=f"Error connecting to NewsAPI: {e}")
+
 
 if __name__ == "__main__":
     import uvicorn
