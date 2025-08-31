@@ -201,6 +201,63 @@
         .toast.error {
             background-color: #dc3545;
         }
+
+        /* Definitions Modal */
+        .modal {
+            display: none; 
+            position: fixed; 
+            z-index: 1001; 
+            left: 0;
+            top: 0;
+            width: 100%; 
+            height: 100%; 
+            overflow: auto; 
+            background-color: rgba(0,0,0,0.6);
+            padding-top: 60px;
+        }
+
+        .modal-content {
+            background-color: #fefefe;
+            margin: 5% auto;
+            padding: 30px;
+            border: 1px solid #888;
+            width: 80%;
+            max-width: 800px;
+            border-radius: 15px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+        }
+
+        .close-btn {
+            color: #aaa;
+            float: right;
+            font-size: 28px;
+            font-weight: bold;
+        }
+
+        .close-btn:hover,
+        .close-btn:focus {
+            color: black;
+            text-decoration: none;
+            cursor: pointer;
+        }
+
+        .definition {
+            margin-bottom: 2em;
+        }
+        .definition h3 {
+            color: #2c3e50;
+            border-bottom: 2px solid #007BFF;
+            padding-bottom: 0.5em;
+        }
+        .definition p {
+            line-height: 1.6;
+        }
+        .definition .source {
+            font-style: italic;
+            font-size: 0.9em;
+            color: #555;
+            word-break: break-all;
+        }
     </style>
 </head>
 <body>
@@ -224,12 +281,10 @@
                 <textarea id="news_article" placeholder="News Article Content" rows="5" required></textarea>
                 <textarea id="summary" placeholder="Summary" rows="3" required></textarea>
                 <div class="biases">
-                    <label><input type="checkbox" id="bias_religious"> Religious</label>
-                    <label><input type="checkbox" id="bias_cultural"> Cultural</label>
-                    <label><input type="checkbox" id="bias_language"> Language</label>
+                    <label><input type="checkbox" id="bias_political"> Political</label>
                     <label><input type="checkbox" id="bias_gender"> Gender</label>
-                    <label><input type="checkbox" id="bias_pro_gov"> Pro Gov</label>
-                    <label><input type="checkbox" id="bias_anti_gov"> Anti Gov</label>
+                    <label><input type="checkbox" id="bias_cultural"> Cultural</label>
+                    <label><input type="checkbox" id="bias_ideology"> Ideology</label>
                 </div>
                 <button type="submit">Add Article</button>
             </form>
@@ -238,6 +293,7 @@
         <div class="articles-section">
             <h2>Saved Articles</h2>
             <button id="view-articles">Show Articles</button>
+            <button id="view-definitions">View Definitions</button>
             <div class="export-buttons">
                 <button id="export-csv">Export to CSV</button>
                 <button id="export-parquet">Export to Parquet</button>
@@ -245,6 +301,35 @@
             </div>
             <div id="articles-list" style="display:none;"></div>
             <div id="dataset-output" style="display:none;"></div>
+        </div>
+    </div>
+
+    <!-- The Definitions Modal -->
+    <div id="definitions-modal" class="modal">
+        <div class="modal-content">
+            <span class="close-btn">&times;</span>
+            <h2>Bias Definitions</h2>
+            <div class="definition">
+                <h3>Political</h3>
+                <p>People tend to understand the term "political bias" as "lack of neutrality" [2] and as unfair favoritism towards one political group, candidate or ideology [3]; and the pejorative connotation of "political bias"–much like that of "gender bias" or "racial bias"–suggests that whenever possible, politically biased acts should be identified as such, and a corrective action should be taken. Indeed, the essence of claims of political bias is a denunciation of apparent violations of political neutrality in settings where this norm is expected to apply–e.g., media coverage [4,5], legal and bureaucratic decisions [6–8], or academic teaching [9,10].</p>
+                <p class="source">From: <a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC5933769/#sec001" target="_blank" rel="noopener noreferrer">https://pmc.ncbi.nlm.nih.gov/articles/PMC5933769/#sec001</a></p>
+            </div>
+            <div class="definition">
+                <h3>Gender</h3>
+                <p>Any one of a variety of stereotypical beliefs or biases about individuals on the basis of their gender. These biases can be expressed linguistically, as in use of the phrase physicians and their wives (instead of physicians and their partners, which avoids the implication that physicians must be male/masculine) or of the use of gender pronouns when people of all genders are being discussed.</p>
+                <p class="source">From: <a href="https://dictionary.apa.org/gender-bias?6df6a1c6_page=4" target="_blank" rel="noopener noreferrer">https://dictionary.apa.org/gender-bias?6df6a1c6_page=4</a></p>
+            </div>
+            <div class="definition">
+                <h3>Cultural</h3>
+                <p>Cultural bias occurs when an individual or group imposes their cultural values and norms on other groups. Cultural bias assumes that one’s own culture is superior to others. When it is backed by social power, cultural bias can lead to policies and practices that demean, dismiss, and even destroy other cultures and the people in those cultures.</p>
+                <p>Such individual and group bias becomes systemic when group bias is backed up by political, economic, and social systems. In those cases, respect and equity among cultural groups are sacrificed in favor of the dominant group and the cultural norms of the group.</p>
+                <p class="source">From: <a href="https://www.r2hub.org/library/what-is-cultural-bias" target="_blank" rel="noopener noreferrer">https://www.r2hub.org/library/what-is-cultural-bias</a></p>
+            </div>
+            <div class="definition">
+                <h3>Ideology</h3>
+                <p>The ideology bias, also known as stance or framing bias, occurs when the issuer presents the information in a partial way. The author may be biased towards a certain ideology, which can influence the way they present information in their work. This can make it difficult for readers to assess the accuracy and impartiality of the information presented.</p>
+                <p class="source">From: <a href="https://www.sciencedirect.com/science/article/pii/S0957417423021437" target="_blank" rel="noopener noreferrer">https://www.sciencedirect.com/science/article/pii/S0957417423021437</a></p>
+            </div>
         </div>
     </div>
 
@@ -263,6 +348,9 @@
             const exportDatasetBtn = document.getElementById('export-dataset');
             const articlesList = document.getElementById('articles-list');
             const datasetOutput = document.getElementById('dataset-output');
+            const viewDefinitionsBtn = document.getElementById('view-definitions');
+            const definitionsModal = document.getElementById('definitions-modal');
+            const closeBtn = document.querySelector('.close-btn');
 
             async function checkHealth() {
                 try {
@@ -318,12 +406,10 @@
                     url: document.getElementById('url').value,
                     news_article: document.getElementById('news_article').value,
                     summary: document.getElementById('summary').value,
-                    bias_religious: document.getElementById('bias_religious').checked,
-                    bias_cultural: document.getElementById('bias_cultural').checked,
-                    bias_language: document.getElementById('bias_language').checked,
+                    bias_political: document.getElementById('bias_political').checked,
                     bias_gender: document.getElementById('bias_gender').checked,
-                    bias_pro_gov: document.getElementById('bias_pro_gov').checked,
-                    bias_anti_gov: document.getElementById('bias_anti_gov').checked,
+                    bias_cultural: document.getElementById('bias_cultural').checked,
+                    bias_ideology: document.getElementById('bias_ideology').checked,
                 };
 
                 try {
@@ -379,6 +465,21 @@
                 }
             });
 
+            // Definitions Modal Logic
+            viewDefinitionsBtn.addEventListener('click', () => {
+                definitionsModal.style.display = 'block';
+            });
+
+            closeBtn.addEventListener('click', () => {
+                definitionsModal.style.display = 'none';
+            });
+
+            window.addEventListener('click', (event) => {
+                if (event.target == definitionsModal) {
+                    definitionsModal.style.display = 'none';
+                }
+            });
+
             async function loadArticles() {
                 try {
                     const response = await fetch(`${apiUrl}/articles/`);
@@ -392,12 +493,10 @@
                         const articleDiv = document.createElement('div');
                         articleDiv.className = 'article';
                         let biases = [];
-                        if (article.bias_religious) biases.push('Religious');
-                        if (article.bias_cultural) biases.push('Cultural');
-                        if (article.bias_language) biases.push('Language');
+                        if (article.bias_political) biases.push('Political');
                         if (article.bias_gender) biases.push('Gender');
-                        if (article.bias_pro_gov) biases.push('Pro Gov');
-                        if (article.bias_anti_gov) biases.push('Anti Gov');
+                        if (article.bias_cultural) biases.push('Cultural');
+                        if (article.bias_ideology) biases.push('Ideology');
 
                         articleDiv.innerHTML = `
                             <h3><a href="${article.url}" target="_blank" rel="noopener noreferrer">${article.url}</a></h3>
