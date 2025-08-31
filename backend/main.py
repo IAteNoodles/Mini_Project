@@ -186,12 +186,16 @@ def export_articles_dataset(db = Depends(get_db)):
 def get_news(q: str):
     news_api_key = "8f51adebb6f54e3da3861e73e3efa150"
     url = f"https://newsapi.org/v2/everything?q={q}&apiKey={news_api_key}"
+    headers = {
+        'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.124 Safari/537.36'
+    }
     try:
-        response = requests.get(url)
+        response = requests.get(url, headers=headers)
         response.raise_for_status()
         return response.json()
     except requests.exceptions.RequestException as e:
-        raise HTTPException(status_code=503, detail=f"Error connecting to NewsAPI: {e}")
+        raise HTTPException(status_code=503, detail=f"Error connecting to NewsAPI: {e}"
+                            )
 
 
 if __name__ == "__main__":
