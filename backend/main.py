@@ -22,12 +22,10 @@ class ArticleCreate(BaseModel):
     url: str
     news_article: str
     summary: str
-    bias_religious: bool = False
-    bias_cultural: bool = False
-    bias_language: bool = False
+    bias_political: bool = False
     bias_gender: bool = False
-    bias_pro_gov: bool = False
-    bias_anti_gov: bool = False
+    bias_cultural: bool = False
+    bias_ideology: bool = False
 
 class ArticleResponse(ArticleCreate):
     id: int
@@ -103,12 +101,10 @@ def initialize_database(db = Depends(get_db)):
             url VARCHAR(255),
             news_article TEXT,
             summary TEXT,
-            bias_religious BOOLEAN DEFAULT FALSE,
-            bias_cultural BOOLEAN DEFAULT FALSE,
-            bias_language BOOLEAN DEFAULT FALSE,
+            bias_political BOOLEAN DEFAULT FALSE,
             bias_gender BOOLEAN DEFAULT FALSE,
-            bias_pro_gov BOOLEAN DEFAULT FALSE,
-            bias_anti_gov BOOLEAN DEFAULT FALSE,
+            bias_cultural BOOLEAN DEFAULT FALSE,
+            bias_ideology BOOLEAN DEFAULT FALSE,
             INDEX(url)
         ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
         """
@@ -124,10 +120,10 @@ def initialize_database(db = Depends(get_db)):
 def create_article(article: ArticleCreate, db = Depends(get_db)):
     conn, cursor = db
     query = """
-    INSERT INTO articles (url, news_article, summary, bias_religious, bias_cultural, bias_language, bias_gender, bias_pro_gov, bias_anti_gov)
-    VALUES (%s, %s, %s, %s, %s, %s, %s, %s, %s)
+    INSERT INTO articles (url, news_article, summary, bias_political, bias_gender, bias_cultural, bias_ideology)
+    VALUES (%s, %s, %s, %s, %s, %s, %s)
     """
-    values = (article.url, article.news_article, article.summary, article.bias_religious, article.bias_cultural, article.bias_language, article.bias_gender, article.bias_pro_gov, article.bias_anti_gov)
+    values = (article.url, article.news_article, article.summary, article.bias_political, article.bias_gender, article.bias_cultural, article.bias_ideology)
     
     try:
         cursor.execute(query, values)
