@@ -26,6 +26,7 @@ class ArticleCreate(BaseModel):
     bias_gender: bool = False
     bias_cultural: bool = False
     bias_ideology: bool = False
+    generated_by_ai: bool = False
 
 class ArticleResponse(ArticleCreate):
     id: int
@@ -105,6 +106,7 @@ def initialize_database(db = Depends(get_db)):
             bias_gender BOOLEAN DEFAULT FALSE,
             bias_cultural BOOLEAN DEFAULT FALSE,
             bias_ideology BOOLEAN DEFAULT FALSE,
+            generated_by_ai BOOLEAN DEFAULT FALSE,
             INDEX(url)
         ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
         """
@@ -120,10 +122,10 @@ def initialize_database(db = Depends(get_db)):
 def create_article(article: ArticleCreate, db = Depends(get_db)):
     conn, cursor = db
     query = """
-    INSERT INTO articles (url, news_article, summary, bias_political, bias_gender, bias_cultural, bias_ideology)
-    VALUES (%s, %s, %s, %s, %s, %s, %s)
+    INSERT INTO articles (url, news_article, summary, bias_political, bias_gender, bias_cultural, bias_ideology, generated_by_ai)
+    VALUES (%s, %s, %s, %s, %s, %s, %s, %s)
     """
-    values = (article.url, article.news_article, article.summary, article.bias_political, article.bias_gender, article.bias_cultural, article.bias_ideology)
+    values = (article.url, article.news_article, article.summary, article.bias_political, article.bias_gender, article.bias_cultural, article.bias_ideology, article.generated_by_ai)
     
     try:
         cursor.execute(query, values)
