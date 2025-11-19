@@ -10,6 +10,23 @@ import io
 import mysql.connector
 from mysql.connector import Error
 import requests
+from bias_detector import get_detector
+import ollama
+import numpy as np
+
+import logging
+import time
+import string
+
+# --- Logging Configuration ---
+logging.basicConfig(
+    level=logging.INFO,
+    format="%(asctime)s - %(name)s - %(levelname)s - %(message)s",
+    handlers=[
+        logging.StreamHandler()
+    ]
+)
+logger = logging.getLogger(__name__)
 
 # --- Database Credentials ---
 hostname = "76b2td.h.filess.io"
@@ -31,6 +48,17 @@ class ArticleCreate(BaseModel):
 
 class ArticleResponse(ArticleCreate):
     id: int
+
+class AnalyzeRequest(BaseModel):
+    text: str
+    explanation_mode: str = "SHAP"
+
+class ExplainRequest(BaseModel):
+    text: str
+    label: str
+    explanation_mode: str
+    tokens: list[str]
+    values: list[float]
 
 # --- FastAPI App Initialization ---
 app = FastAPI()
@@ -196,6 +224,259 @@ def get_news(q: str):
     except requests.exceptions.RequestException as e:
         raise HTTPException(status_code=503, detail=f"Error connecting to NewsAPI: {e}"
                             )
+
+# --- Bias Analysis Logic ---
+LLM_MODEL_NAME = "granite4:3b"
+TOP_FACTOR_LIMIT = 5
+
+def _format_contributions_for_prompt(df: pd.DataFrame, value_column: str, limit: int = 15) -> str:
+    working = df.copy()
+    working["abs"] = working[value_column].abs()
+    trimmed = working.sort_values("abs", ascending=False).head(limit)
+    return "\n".join(
+        f"- {row['Token']}: {row[value_column]:.4f}" for _, row in trimmed.drop(columns=["abs"]).iterrows()
+    )
+
+def _summarize_with_granite(
+    *,
+    text: str,
+    friendly_label: str,
+    method: str,
+    contributions: pd.DataFrame,
+    contribution_column: str,
+) -> str:
+    try:
+        import ollama
+    except ImportError:
+        return "Install the `ollama` package and ensure Granite4 is pulled to enable narrative summaries."
+
+    contribution_block = _format_contributions_for_prompt(contributions, contribution_column)
+    
+    if method == "SHAP":
+        prompt = f"""
+You are a media literacy analyst. The model has classified this article as **{friendly_label}**.
+
+ARTICLE TEXT:
+\"\"\"{text}\"\"\"
+
+METHOD: SHAP (SHapley Additive exPlanations)
+CONTEXT: SHAP values represent the marginal contribution of each word to the final prediction. High positive values mean the word strongly pushes the model towards the '{friendly_label}' label.
+
+KEY INFLUENCERS (Token: SHAP Value):
+{contribution_block}
+
+INSTRUCTIONS:
+1. **Explain the Decision (SHAP)**: Explain how the specific words listed above mathematically contributed to the **{friendly_label}** classification. Discuss the "push and pull" of these words on the score.
+2. **Analyze Tone**: Discuss how these high-impact words shape the article's tone.
+3. **Strictly No Advice**: Do not mention rewriting, improving, or fixing the text. Do not state that the text is fine as is. Stop after the tone analysis.
+
+Output Markdown.
+"""
+    elif method == "LIME":
+        prompt = f"""
+You are a media literacy analyst. The model has classified this article as **{friendly_label}**.
+
+ARTICLE TEXT:
+\"\"\"{text}\"\"\"
+
+METHOD: LIME (Local Interpretable Model-agnostic Explanations)
+CONTEXT: LIME identifies the words that are most influential in the local context. These are the words that, if removed or changed, would most significantly alter the prediction.
+
+KEY INFLUENCERS (Token: LIME Weight):
+{contribution_block}
+
+INSTRUCTIONS:
+1. **Explain the Decision (LIME)**: Explain why the presence of the words listed above makes the article **{friendly_label}**. Discuss them as the "triggers" for this classification.
+2. **Analyze Tone**: Discuss how these trigger words affect the overall tone.
+3. **Strictly No Advice**: Do not mention rewriting, improving, or fixing the text. Do not state that the text is fine as is. Stop after the tone analysis.
+
+Output Markdown.
+"""
+    elif method == "Attention":
+        prompt = f"""
+You are a media literacy analyst. The model has classified this article as **{friendly_label}**.
+
+ARTICLE TEXT:
+\"\"\"{text}\"\"\"
+
+METHOD: Self-Attention Mechanism
+CONTEXT: Attention weights show where the model "looked" while processing the text. High attention means the model focused heavily on these words to derive its meaning and classification.
+
+KEY INFLUENCERS (Token: Attention Weight):
+{contribution_block}
+
+INSTRUCTIONS:
+1. **Explain the Decision (Attention)**: Explain why the model focused its "gaze" on the words listed above to conclude the article is **{friendly_label}**. Why are these words the most salient?
+2. **Analyze Tone**: Discuss why these focal points are critical to the article's tone.
+3. **Strictly No Advice**: Do not mention rewriting, improving, or fixing the text. Do not state that the text is fine as is. Stop after the tone analysis.
+
+Output Markdown.
+"""
+    else:
+        # Fallback prompt
+        prompt = f"""
+You are a media literacy analyst. The model has classified this article as **{friendly_label}**.
+
+ARTICLE TEXT:
+\"\"\"{text}\"\"\"
+
+KEY INFLUENCERS (Token: Contribution Value):
+{contribution_block}
+
+INSTRUCTIONS:
+1. **Explain the Bias**: Using the key influencers and their values, explain *why* the article was classified as {friendly_label}. Discuss how specific words (and their high contribution values) signal this bias.
+2. **Analyze Tone**: Discuss how the identified words affect the overall tone.
+3. **Strictly No Advice**: Do not mention rewriting, improving, or fixing the text. Do not state that the text is fine as is. Stop after the tone analysis.
+
+Output Markdown.
+"""
+
+    try:
+        response = ollama.chat(
+            model=LLM_MODEL_NAME,
+            messages=[
+                {"role": "system", "content": "You are a helpful AI that explains bias detection results using SHAP/LIME/Attention values."},
+                {"role": "user", "content": prompt},
+            ],
+        )
+        message = response.get("message", {})
+        return message.get("content", "Granite4 did not return any content.").strip()
+    except Exception as exc:
+        return f"Unable to query Granite4: {exc}"
+
+@app.post("/explain")
+def explain_analysis(request: ExplainRequest):
+    # Reconstruct DataFrame from request
+    contributions = pd.DataFrame({
+        "Token": request.tokens,
+        "Contribution": request.values
+    })
+    
+    narrative = _summarize_with_granite(
+        text=request.text,
+        friendly_label=request.label,
+        method=request.explanation_mode,
+        contributions=contributions,
+        contribution_column="Contribution",
+    )
+    return {"narrative": narrative}
+
+@app.post("/analyze")
+def analyze_text(request: AnalyzeRequest):
+    logger.info(f"Received analysis request. Mode: {request.explanation_mode}")
+    start_time = time.time()
+
+    if not request.text.strip():
+        raise HTTPException(status_code=400, detail="Text cannot be empty")
+
+    detector = get_detector()
+    # Truncate text to avoid model errors
+    text_to_analyze = detector.truncate(request.text)
+    logger.info(f"Text truncated to {len(text_to_analyze)} chars.")
+
+    logger.info("Running prediction...")
+    prediction = detector.predict(text_to_analyze)
+    probabilities = detector.predict_proba([text_to_analyze])[0]
+    friendly_label = detector.display_label(prediction.label)
+    logger.info(f"Prediction done. Label: {friendly_label}, Score: {prediction.score}")
+    
+    contribution_column = "Contribution"
+    explanation_data = {"tokens": [], "values": []}
+    explanation_table = None
+    heatmap_html = None
+
+    if request.explanation_mode == "LIME":
+        logger.info("Generating LIME explanation (1000 samples)...")
+        explanation = detector.explain_lime(text_to_analyze, num_features=20, num_samples=1000)
+        contributions = explanation.as_list()
+        explanation_table = pd.DataFrame(contributions, columns=["Token", contribution_column])
+        explanation_data = {
+            "tokens": [c[0] for c in contributions],
+            "values": [c[1] for c in contributions]
+        }
+    elif request.explanation_mode == "Attention":
+        logger.info("Extracting Attention weights...")
+        raw_tokens, values, heads_data = detector.explain_attention(text_to_analyze)
+        
+        # Generate Heatmap HTML
+        heatmap_html = detector.generate_attention_html(raw_tokens, values)
+        
+        # Clean tokens for the chart
+        cleaned_tokens = [t.replace('Ġ', '') for t in raw_tokens]
+        
+        # Filter out punctuation and special tokens for the chart/heatmap
+        indices_to_keep = [
+            i for i, t in enumerate(cleaned_tokens) 
+            if t.strip() not in string.punctuation and t.strip() not in ["<s>", "</s>", "<pad>", ""]
+        ]
+        
+        filtered_tokens = [cleaned_tokens[i] for i in indices_to_keep]
+        filtered_values = values[indices_to_keep]
+        
+        # Create DataFrame with original indices to map back to heads
+        explanation_table = pd.DataFrame({
+            "Token": filtered_tokens, 
+            contribution_column: filtered_values,
+            "OriginalIndex": indices_to_keep
+        })
+        
+        # Sort by absolute value for the chart
+        explanation_table["abs"] = explanation_table[contribution_column].abs()
+        sorted_df = explanation_table.sort_values("abs", ascending=False).head(20)
+        
+        # Filter head data to only include top 20 tokens
+        # heads_data is [num_heads, seq_len]
+        top_indices = sorted_df["OriginalIndex"].tolist()
+        top_heads_data = heads_data[:, top_indices]
+
+        explanation_data = {
+            "tokens": sorted_df["Token"].tolist(),
+            "values": sorted_df[contribution_column].tolist(),
+            "heads": top_heads_data.tolist(), # [num_heads, 20]
+        }
+        # No heatmap HTML for attention yet, or we could generate a custom one
+        # heatmap_html = None 
+    else:
+        logger.info("Generating SHAP explanation...")
+        # Limit max_evals to prevent timeouts
+        shap_explanation = detector.shap_explain(text_to_analyze, max_evals=300)
+        target_label = prediction.label
+        shap_df = detector.shap_dataframe(shap_explanation, target_label)
+        explanation_table = shap_df.rename(columns={"SHAP Value": contribution_column})
+        
+        # Generate Heatmap HTML
+        heatmap_html = detector.shap_text_html(shap_explanation, target_label)
+        
+        # Sort by absolute value for the chart
+        explanation_table["abs"] = explanation_table[contribution_column].abs()
+        sorted_df = explanation_table.sort_values("abs", ascending=False).head(20)
+        explanation_data = {
+            "tokens": sorted_df["Token"].tolist(),
+            "values": sorted_df[contribution_column].tolist()
+        }
+    
+    logger.info("Explanation generated.")
+
+    # Narrative is now generated on demand via /explain endpoint
+    narrative = None
+
+    probs_formatted = [
+        {"label": detector.display_label(label), "value": float(prob)}
+        for label, prob in zip(detector.class_names, probabilities)
+    ]
+    probs_formatted.sort(key=lambda x: x["value"], reverse=True)
+
+    elapsed = time.time() - start_time
+    logger.info(f"Analysis complete in {elapsed:.2f}s")
+
+    return {
+        "label": friendly_label,
+        "score": float(prediction.score),
+        "probabilities": probs_formatted,
+        "explanation": explanation_data,
+        "heatmap_html": heatmap_html,
+        "narrative": narrative
+    }
 
 
 if __name__ == "__main__":

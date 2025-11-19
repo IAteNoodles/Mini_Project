@@ -1,0 +1,27 @@
+# Requirements for the LLM Article Analysis Framework
+
+# Core ML/AI libraries
+torch>=2.0.0
+transformers>=4.35.0
+accelerate>=0.20.0
+bitsandbytes>=0.41.0
+
+# LLM orchestration and validation
+langchain>=0.1.0
+langchain-community>=0.0.10
+instructor>=0.4.0
+openai>=1.0.0  # For instructor compatibility
+
+# Data handling
+pydantic>=2.0.0
+pymongo>=4.0.0
+pandas>=2.0.0
+
+# Utilities
+python-dotenv>=1.0.0
+tqdm>=4.65.0
+loguru>=0.7.0
+tenacity>=8.2.0
+
+# Optional: For model optimization
+optimum>=1.15.0

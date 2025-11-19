@@ -1,0 +1,894 @@
+{
+  "NDTV": [
+    {
+      "url": "https://www.ndtv.com/india-news/india-canada-news-khalistani-terrorist-hardeep-singh-nijjar-were-very-serious-aboutjustin-trudeau-on-ties-with-india-amid-row-4433840#pfrom=home-ndtv_",
+      "text": "Committed To Closer Ties With India, Says Justin Trudeau Amid Row",
+      "selector": "h3 a"
+    },
+    {
+      "url": "https://www.ndtv.com/opinion/lessons-for-bjp-from-telangana-to-tamil-nadu-4433458#pfrom=home-ndtv_",
+      "text": "In Avoiding Repeat Of Telangana, BJP Pays Price In Tamil Nadu",
+      "selector": "h3 a"
+    },
+    {
+      "url": "https://www.ndtv.com/india-news/rakhis-earphones-screws-among-100-items-pulled-from-punjab-mans-stomach-4433880#pfrom=home-ndtv_",
+      "text": "Man Complains Of Stomach Pain For Years, Doctors Find This Inside His Body",
+      "selector": "h3 a"
+    },
+    {
+      "url": "https://www.ndtv.com/world-news/what-us-said-on-indias-response-on-canadas-allegations-4433791#pfrom=home-ndtv_",
+      "text": "\"They Can Speak For...\": US On India's Response On Canada's Allegations",
+      "selector": "h3 a"
+    },
+    {
+      "url": "https://www.ndtv.com/world-news/shehbaz-sharif-snubbed-at-sco-pak-pm-stands-as-pm-modi-putin-talk-9194062?pfrom=home-ndtv_topscroll",
+      "text": "Shehbaz Sharif Snubbed? Pak PM On Sidelines As PM Modi, Putin Walk Past",
+      "selector": "h3 a"
+    },
+    {
+      "url": "https://www.ndtv.com/world-news/sco-summit-pm-narendra-modi-putin-xi-jinping-hugs-handshakes-between-pm-modi-xi-putin-a-loud-message-to-donald-trump-9194044?pfrom=home-ndtv_topscroll",
+      "text": "Handshakes, Hugs, Smiles: PM Modi, Putin, Xi Bonhomie At SCO Summit",
+      "selector": "h3 a"
+    },
+    {
+      "url": "https://www.ndtv.com/world-news/tariff-news-donald-trump-adviser-peter-navarro-attacks-indias-russian-oil-trade-brahmins-profiteering-pm-modi-in-bed-with-china-russia-9193683?pfrom=home-ndtv_topscroll",
+      "text": "\"Brahmins Profiteering...\": Top Trump Aide On India's Russian Oil Trade",
+      "selector": "h3 a"
+    },
+    {
+      "url": "https://www.ndtv.com/world-news/sco-china-summit-pm-modi-shares-car-ride-with-putin-after-sco-for-bilateral-meet-9194453?pfrom=home-ndtv_topscroll",
+      "text": "PM Modi Shares Car Ride With Putin After SCO For Bilateral Meet",
+      "selector": "h3 a"
+    },
+    {
+      "url": "https://www.ndtv.com/world-news/pm-modi-raises-cross-border-terrorism-at-sco-summit-calls-it-a-challenge-9194031?pfrom=home-ndtv_topscroll",
+      "text": "Shehbaz Sharif Present, PM Modi Sends 'No Compromise On Terror' Message",
+      "selector": "h3 a"
+    },
+    {
+      "url": "https://www.ndtv.com/world-news/500-killed-in-6-0-earthquake-in-afghanistan-near-pakistan-border-reports-9194527?pfrom=home-ndtv_topscroll",
+      "text": "500 Killed In 6.0 Earthquake In Afghanistan Near Pakistan Border: Reports",
+      "selector": "h3 a"
+    },
+    {
+      "url": "https://www.ndtv.com/world-news/hongqi-all-about-xi-jinpings-preferred-car-in-which-pm-modi-travelled-in-china-9194033?pfrom=home-ndtv_topstories",
+      "text": "'Hongqi': All About Xi's Preferred Car In Which PM Modi Travelled In China",
+      "selector": "h3 a"
+    },
+    {
+      "url": "https://www.ndtv.com/world-news/why-the-b-29-superfortress-was-wwii-039-s-costliest-and-most-advanced-bomber-9194394?pfrom=home-ndtv_topstories",
+      "text": "This WWII Bomber Was So Advanced It Cost More Than The Atomic Bomb",
+      "selector": "h3 a"
+    },
+    {
+      "url": "https://www.ndtv.com/world-news/us-would-be-completely-destroyed-without-tariffs-president-donald-trump-slams-court-ruling-9193686?pfrom=home-ndtv_topstories",
+      "text": "US Would Be \"Completely Destroyed\" Without Tariffs: Trump Slams Court Ruling",
+      "selector": "h3 a"
+    },
+    {
+      "url": "https://www.ndtv.com/world-news/chaya-nayak-the-indian-origin-ai-expert-who-quit-meta-to-join-openai-9194160?pfrom=home-ndtv_topstories",
+      "text": "Who Is Chaya Nayak, Indian-Origin Techie Quitting Meta To Join OpenAI",
+      "selector": "h3 a"
+    },
+    {
+      "url": "https://www.ndtv.com/world-news/what-pm-modi-said-at-sco-summits-plenary-session-in-china-full-statement-terrorism-pm-modi-in-china-shehbaz-sharif-india-pakistan-pahalgam-terror-atta-9193996?pfrom=home-ndtv_topstories",
+      "text": "Pahalgam Attack, Terrorism: What PM Said At SCO Summit. Full Statement",
+      "selector": "h3 a"
+    },
+    {
+      "url": "https://www.ndtv.com/india-news/ajit-doval-raw-pm-modi-sco-summit-xi-jinping-ajit-dovals-walkout-when-super-spy-left-sco-meet-over-pak-distortion-9191022?pfrom=home-ndtv_topstories",
+      "text": "Ajit Doval's SCO Exit: The 'Super Spy' Who Walked Out Over Pakistan Map",
+      "selector": "h3 a"
+    },
+    {
+      "url": "https://www.ndtv.com/world-news/sco-summit-pm-modi-xi-jinping-india-china-when-pak-pm-shehbaz-sharifs-headphone-fumble-made-vladimir-putin-laugh-at-sco-9191313?pfrom=home-ndtv_topstories",
+      "text": "When Pak PM Shehbaz Sharif's Headphone Fumble Made Putin Laugh At SCO",
+      "selector": "h3 a"
+    },
+    {
+      "url": "https://www.ndtv.com/offbeat/indian-billboard-goes-viral-for-cheeky-elon-musk-uranus-wordplay-internet-calls-it-hilarious-9194476?pfrom=home-ndtv_lateststories",
+      "text": "Indian Billboard Goes Viral For Elon Musk, Uranus Wordplay: 'It's Hilarious'",
+      "selector": "h3 a"
+    },
+    {
+      "url": "https://www.ndtv.com/offbeat/delhi-womans-thank-you-to-man-in-metro-turns-into-a-creepy-encounter-ill-think-twice-9194127?pfrom=home-ndtv_lateststories",
+      "text": "Delhi Woman's 'Thank You' To Man Aboard Metro Turns Into A Creepy Encounter",
+      "selector": "h3 a"
+    },
+    {
+      "url": "https://www.ndtv.com/offbeat/watch-bengaluru-professors-stunning-dance-on-iconic-bollywood-song-goes-viral-9194408?pfrom=home-ndtv_lateststories",
+      "text": "Bengaluru Professor's Stunning Dance On Iconic Bollywood Song Goes Viral",
+      "selector": "h3 a"
+    },
+    {
+      "url": "https://www.ndtv.com/offbeat/95-organisations-get-zero-return-from-using-ai-tools-mit-study-shows-9193724?pfrom=home-ndtv_lateststories",
+      "text": "95% Organisations Get Zero Return From Using AI Tools, MIT Study Shows",
+      "selector": "h3 a"
+    },
+    {
+      "url": "https://www.ndtv.com/india-news/dharmasthala-masked-man-a-skull-mass-grave-claim-decoding-the-dharmasthala-conspiracy-9161065?pfrom=home-ndtv_premium",
+      "text": "Masked Man, A Skull, Mass Grave Claim: Decoding The Dharmasthala Conspiracy",
+      "selector": "h3 a"
+    },
+    {
+      "url": "https://www.ndtv.com/india-news/mig-21-fighter-jet-retired-mig-21-bison-india-mig-21-flying-coffin-mig-21-fighter-jet-retirement-9160804?pfrom=home-ndtv_premium",
+      "text": "MIG 21 - 6 Decades Of Triumphs, Tragedies, And A Legacy To Remember",
+      "selector": "h3 a"
+    },
+    {
+      "url": "https://www.ndtv.com/opinion/wang-yi-in-india-pakistan-afghanistan-whats-going-on-behind-the-scenes-9156401?pfrom=home-ndtv_premium",
+      "text": "Opinion: India To Kabul To Pak: The Plot Behind Chinese Foreign Minister's Many Tours",
+      "selector": "h3 a"
+    },
+    {
+      "url": "https://www.ndtv.com/opinion/trumps-hollow-claims-heres-where-india-and-china-really-buy-their-oil-from-9154522?pfrom=home-ndtv_premium",
+      "text": "Opinion: Why India Won't Take Lessons On Oil From Trump And Co.",
+      "selector": "h3 a"
+    },
+    {
+      "url": "https://www.ndtv.com/feature/new-harvard-study-confirms-this-common-vitamin-can-slow-ageing-process-9194030?pfrom=home-ndtv_featured",
+      "text": "New Harvard Study Confirms This Common Vitamin Can Slow Ageing Process",
+      "selector": "h3 a"
+    },
+    {
+      "url": "https://www.ndtv.com/world-news/sco-china-summit-pm-modi-shares-car-ride-with-putin-after-sco-for-bilateral-meet-9194453",
+      "text": "PM Modi Shares Car Ride With Putin After SCO For Bilateral Meet",
+      "selector": "h2 a"
+    },
+    {
+      "url": "https://www.ndtv.com/world-news/why-the-b-29-superfortress-was-wwii-039-s-costliest-and-most-advanced-bomber-9194394",
+      "text": "B-29 Superfortress: This WWII Bomber Was So Advanced It Cost More Than The Atomic Bomb",
+      "selector": "h2 a"
+    },
+    {
+      "url": "https://www.ndtv.com/world-news/afghanistan-earthquake-update-at-least-250-killed-500-injured-as-6-0-magnitude-earthquake-hits-afghanistan-9194304",
+      "text": "250 Killed, Many Villages Destroyed As 6.0 Magnitude Earthquake Hits Afghanistan",
+      "selector": "h2 a"
+    },
+    {
+      "url": "https://www.ndtv.com/world-news/sco-strongly-condemns-pahalgam-attack-echoes-pm-modis-double-standards-in-fight-against-terrorism-unacceptable-message-9194291",
+      "text": "SCO Condemns Pahalgam Attack, Echoes PM Modi's 'Double Standards' Message",
+      "selector": "h2 a"
+    },
+    {
+      "url": "https://www.ndtv.com/world-news/chaya-nayak-the-indian-origin-ai-expert-who-quit-meta-to-join-openai-9194160",
+      "text": "Chaya Nayak: The Indian-Origin AI Expert Who Quit Meta To Join OpenAI",
+      "selector": "h2 a"
+    },
+    {
+      "url": "https://www.ndtv.com/world-news/no-place-in-modern-australia-government-slams-campaigns-against-increasing-migration-of-indians-9194111",
+      "text": "\"No Place In Modern Australia\": Government Slams Campaigns Against Increasing Migration Of Indians",
+      "selector": "h2 a"
+    },
+    {
+      "url": "https://www.ndtv.com/world-news/shehbaz-sharif-snubbed-at-sco-pak-pm-stands-as-pm-modi-putin-talk-9194062",
+      "text": "Shehbaz Sharif Snubbed? Pak PM On Sidelines As PM Modi, Putin Walk Past",
+      "selector": "h2 a"
+    },
+    {
+      "url": "https://www.ndtv.com/world-news/sco-summit-pm-narendra-modi-putin-xi-jinping-hugs-handshakes-between-pm-modi-xi-putin-a-loud-message-to-donald-trump-9194044",
+      "text": "How PM Modi Responded To Trump's Tariff War With Hugs, Handshakes With Xi, Putin",
+      "selector": "h2 a"
+    },
+    {
+      "url": "https://www.ndtv.com/world-news/hongqi-all-about-xi-jinpings-preferred-car-in-which-pm-modi-travelled-in-china-9194033",
+      "text": "'Hongqi': All about Xi Jinping's Preferred Car In Which PM Modi Travelled In China",
+      "selector": "h2 a"
+    },
+    {
+      "url": "https://www.ndtv.com/world-news/pm-modi-raises-cross-border-terrorism-at-sco-summit-calls-it-a-challenge-9194031",
+      "text": "Shehbaz Sharif Present, PM Modi Sends 'No Compromise On Terror' Message",
+      "selector": "h2 a"
+    },
+    {
+      "url": "https://www.ndtv.com/world-news/what-pm-modi-said-at-sco-summits-plenary-session-in-china-full-statement-terrorism-pm-modi-in-china-shehbaz-sharif-india-pakistan-pahalgam-terror-atta-9193996",
+      "text": "What PM Modi Said At SCO Summit's Plenary Session In China: Full Statement",
+      "selector": "h2 a"
+    },
+    {
+      "url": "https://www.ndtv.com/world-news/afghanistan-earthquake-update-hundreds-feared-dead-after-6-0-magnitude-earthquake-strikes-afghanistan-9193807",
+      "text": "Hundreds Feared Dead After 6.0 Magnitude Earthquake Strikes Afghanistan",
+      "selector": "h2 a"
+    },
+    {
+      "url": "https://www.ndtv.com/world-news/always-a-delight-pm-modis-handshake-hug-with-putin-ahead-of-sco-summit-9193756",
+      "text": "Handshakes, Hugs, Smiles: PM Modi, Putin, Xi Bonhomie At SCO Summit",
+      "selector": "h2 a"
+    },
+    {
+      "url": "https://www.ndtv.com/world-news/us-would-be-completely-destroyed-without-tariffs-president-donald-trump-slams-court-ruling-9193686",
+      "text": "US Would Be \"Completely Destroyed\" Without Tariffs: Trump Slams Court Ruling",
+      "selector": "h2 a"
+    },
+    {
+      "url": "https://www.ndtv.com/world-news/tariff-news-donald-trump-adviser-peter-navarro-attacks-indias-russian-oil-trade-brahmins-profiteering-pm-modi-in-bed-with-china-russia-9193683",
+      "text": "\"Brahmins Profiteering...\": Top Trump Aide On India's Russian Oil Trade",
+      "selector": "h2 a"
+    },
+    {
+      "url": "https://www.ndtv.com/world-news/donald-trump-amid-he-is-dead-viral-trend-never-felt-better-in-my-life-donald-trump-health-concerns-trump-is-dead-jd-vance-simpsons-9193647",
+      "text": "\"Never Felt Better In My Life\": Donald Trump Amid He Is 'Dead' Viral Trend",
+      "selector": "h2 a"
+    },
+    {
+      "url": "https://www.ndtv.com/world-news/russian-consulate-in-sydney-car-crash-man-39-arrested-after-car-crashes-into-russian-consulate-in-australia-9193522",
+      "text": "Man, 39, Arrested After Car Crashes Into Russian Consulate In Australia",
+      "selector": "h2 a"
+    },
+    {
+      "url": "https://www.ndtv.com/world-news/friendship-trade-cultural-linkages-pm-modi-recalls-indias-global-ties-as-he-met-world-leaders-at-sco-summit-reception-9193003",
+      "text": "\"Friendship, Trade, Cultural Linkages\": PM Modi Meets World Leaders At SCO Reception",
+      "selector": "h2 a"
+    },
+    {
+      "url": "https://www.ndtv.com/world-news/israel-kills-hamas-spokesperson-amid-expanding-gaza-offensive-discussion-9192697",
+      "text": "Israel Kills Hamas Spokesperson Amid Expanding Gaza Offensive Discussion",
+      "selector": "h2 a"
+    },
+    {
+      "url": "https://www.ndtv.com/world-news/chinese-state-media-gives-wide-coverage-to-pm-modis-visit-9192579",
+      "text": "Chinese State Media Gives Wide Coverage To PM Modi's Visit",
+      "selector": "h2 a"
+    },
+    {
+      "url": "mailto:?subject=PM Modi Shares Car Ride With Putin After SCO For Bilateral Meet&body=Check out this link https://www.ndtv.com/world-news/sco-china-summit-pm-modi-shares-car-ride-with-putin-after-sco-for-bilateral-meet-9194453#pfrom=listing",
+      "text": "Email",
+      "selector": "article a"
+    },
+    {
+      "url": "mailto:?subject=B-29 Superfortress: This WWII Bomber Was So Advanced It Cost More Than The Atomic Bomb&body=Check out this link https://www.ndtv.com/world-news/why-the-b-29-superfortress-was-wwii-039-s-costliest-and-most-advanced-bomber-9194394#pfrom=listing",
+      "text": "Email",
+      "selector": "article a"
+    },
+    {
+      "url": "mailto:?subject=250 Killed, Many Villages Destroyed As 6.0 Magnitude Earthquake Hits Afghanistan&body=Check out this link https://www.ndtv.com/world-news/afghanistan-earthquake-update-at-least-250-killed-500-injured-as-6-0-magnitude-earthquake-hits-afghanistan-9194304#pfrom=listing",
+      "text": "Email",
+      "selector": "article a"
+    },
+    {
+      "url": "mailto:?subject=SCO Condemns Pahalgam Attack, Echoes PM Modis Double Standards Message&body=Check out this link https://www.ndtv.com/world-news/sco-strongly-condemns-pahalgam-attack-echoes-pm-modis-double-standards-in-fight-against-terrorism-unacceptable-message-9194291#pfrom=listing",
+      "text": "Email",
+      "selector": "article a"
+    },
+    {
+      "url": "mailto:?subject=Chaya Nayak: The Indian-Origin AI Expert Who Quit Meta To Join OpenAI&body=Check out this link https://www.ndtv.com/world-news/chaya-nayak-the-indian-origin-ai-expert-who-quit-meta-to-join-openai-9194160#pfrom=listing",
+      "text": "Email",
+      "selector": "article a"
+    },
+    {
+      "url": "mailto:?subject=No Place In Modern Australia: Government Slams Campaigns Against Increasing Migration Of Indians&body=Check out this link https://www.ndtv.com/world-news/no-place-in-modern-australia-government-slams-campaigns-against-increasing-migration-of-indians-9194111#pfrom=listing",
+      "text": "Email",
+      "selector": "article a"
+    },
+    {
+      "url": "mailto:?subject=Shehbaz Sharif Snubbed? Pak PM On Sidelines As PM Modi, Putin Walk Past&body=Check out this link https://www.ndtv.com/world-news/shehbaz-sharif-snubbed-at-sco-pak-pm-stands-as-pm-modi-putin-talk-9194062#pfrom=listing",
+      "text": "Email",
+      "selector": "article a"
+    },
+    {
+      "url": "mailto:?subject=How PM Modi Responded To Trumps Tariff War With Hugs, Handshakes With Xi, Putin&body=Check out this link https://www.ndtv.com/world-news/sco-summit-pm-narendra-modi-putin-xi-jinping-hugs-handshakes-between-pm-modi-xi-putin-a-loud-message-to-donald-trump-9194044#pfrom=listing",
+      "text": "Email",
+      "selector": "article a"
+    },
+    {
+      "url": "mailto:?subject=Hongqi: All about Xi Jinpings Preferred Car In Which PM Modi Travelled In China&body=Check out this link https://www.ndtv.com/world-news/hongqi-all-about-xi-jinpings-preferred-car-in-which-pm-modi-travelled-in-china-9194033#pfrom=listing",
+      "text": "Email",
+      "selector": "article a"
+    },
+    {
+      "url": "mailto:?subject=Shehbaz Sharif Present, PM Modi Sends No Compromise On Terror Message&body=Check out this link https://www.ndtv.com/world-news/pm-modi-raises-cross-border-terrorism-at-sco-summit-calls-it-a-challenge-9194031#pfrom=listing",
+      "text": "Email",
+      "selector": "article a"
+    },
+    {
+      "url": "mailto:?subject=What PM Modi Said At SCO Summits Plenary Session In China: Full Statement&body=Check out this link https://www.ndtv.com/world-news/what-pm-modi-said-at-sco-summits-plenary-session-in-china-full-statement-terrorism-pm-modi-in-china-shehbaz-sharif-india-pakistan-pahalgam-terror-atta-9193996#pfrom=listing",
+      "text": "Email",
+      "selector": "article a"
+    },
+    {
+      "url": "mailto:?subject=Hundreds Feared Dead After 6.0 Magnitude Earthquake Strikes Afghanistan&body=Check out this link https://www.ndtv.com/world-news/afghanistan-earthquake-update-hundreds-feared-dead-after-6-0-magnitude-earthquake-strikes-afghanistan-9193807#pfrom=listing",
+      "text": "Email",
+      "selector": "article a"
+    },
+    {
+      "url": "mailto:?subject=Handshakes, Hugs, Smiles: PM Modi, Putin, Xi Bonhomie At SCO Summit&body=Check out this link https://www.ndtv.com/world-news/always-a-delight-pm-modis-handshake-hug-with-putin-ahead-of-sco-summit-9193756#pfrom=listing",
+      "text": "Email",
+      "selector": "article a"
+    },
+    {
+      "url": "mailto:?subject=US Would Be Completely Destroyed Without Tariffs: Trump Slams Court Ruling&body=Check out this link https://www.ndtv.com/world-news/us-would-be-completely-destroyed-without-tariffs-president-donald-trump-slams-court-ruling-9193686#pfrom=listing",
+      "text": "Email",
+      "selector": "article a"
+    },
+    {
+      "url": "mailto:?subject=Brahmins Profiteering...: Top Trump Aide On Indias Russian Oil Trade&body=Check out this link https://www.ndtv.com/world-news/tariff-news-donald-trump-adviser-peter-navarro-attacks-indias-russian-oil-trade-brahmins-profiteering-pm-modi-in-bed-with-china-russia-9193683#pfrom=listing",
+      "text": "Email",
+      "selector": "article a"
+    },
+    {
+      "url": "mailto:?subject=Never Felt Better In My Life: Donald Trump Amid He Is Dead Viral Trend&body=Check out this link https://www.ndtv.com/world-news/donald-trump-amid-he-is-dead-viral-trend-never-felt-better-in-my-life-donald-trump-health-concerns-trump-is-dead-jd-vance-simpsons-9193647#pfrom=listing",
+      "text": "Email",
+      "selector": "article a"
+    },
+    {
+      "url": "mailto:?subject=Man, 39, Arrested After Car Crashes Into Russian Consulate In Australia&body=Check out this link https://www.ndtv.com/world-news/russian-consulate-in-sydney-car-crash-man-39-arrested-after-car-crashes-into-russian-consulate-in-australia-9193522#pfrom=listing",
+      "text": "Email",
+      "selector": "article a"
+    },
+    {
+      "url": "mailto:?subject=Friendship, Trade, Cultural Linkages: PM Modi Meets World Leaders At SCO Reception&body=Check out this link https://www.ndtv.com/world-news/friendship-trade-cultural-linkages-pm-modi-recalls-indias-global-ties-as-he-met-world-leaders-at-sco-summit-reception-9193003#pfrom=listing",
+      "text": "Email",
+      "selector": "article a"
+    },
+    {
+      "url": "mailto:?subject=Israel Kills Hamas Spokesperson Amid Expanding Gaza Offensive Discussion&body=Check out this link https://www.ndtv.com/world-news/israel-kills-hamas-spokesperson-amid-expanding-gaza-offensive-discussion-9192697#pfrom=listing",
+      "text": "Email",
+      "selector": "article a"
+    },
+    {
+      "url": "mailto:?subject=Chinese State Media Gives Wide Coverage To PM Modis Visit&body=Check out this link https://www.ndtv.com/world-news/chinese-state-media-gives-wide-coverage-to-pm-modis-visit-9192579#pfrom=listing",
+      "text": "Email",
+      "selector": "article a"
+    },
+    {
+      "url": "https://www.ndtv.com/offbeat/thats-the-american-dream-new-york-governor-lauds-indian-chefs-success-amid-immigration-debate-9193903",
+      "text": "",
+      "selector": "article a"
+    },
+    {
+      "url": "https://www.ndtv.com/india-news/on-camera-servitor-at-delhis-kalkaji-temple-beaten-to-death-over-prasad-9185084",
+      "text": "On Camera, Servitor At Delhi's Kalkaji Temple Beaten To Death Over 'Prasad'",
+      "selector": "h2 a"
+    },
+    {
+      "url": "https://www.ndtv.com/offbeat/im-a-kannadiga-but-bengaluru-resident-feels-like-stranger-in-own-city-amid-cultural-shift-9184703",
+      "text": "'I'm A Kannadiga But...': Bengaluru Resident Feels Like 'Stranger' In Own City Amid Cultural Shift",
+      "selector": "h2 a"
+    },
+    {
+      "url": "https://www.ndtv.com/india-news/bengaluru-techie-death-shilpa-panchangamath-pregnant-wife-dead-techie-turned-panipuri-seller-accused-of-dowry-abuse-9179075",
+      "text": "\"You're Dark\": Techie Who Was Found Dead Was Taunted Over Skin Colour",
+      "selector": "h2 a"
+    },
+    {
+      "url": "https://www.ndtv.com/india-news/street-dogs-delhi-dog-shelters-niall-harbison-irish-dog-rescuer-was-in-india-during-stray-dog-protests-what-he-found-9174250",
+      "text": "Irish Dog Rescuer Was In India During Stray Dog Protests. What He Found",
+      "selector": "h2 a"
+    },
+    {
+      "url": "https://www.ndtv.com/india-news/denied-salary-in-advance-man-robs-employer-of-rs-4-5-lakh-in-delhi-9166349",
+      "text": "Denied Salary In Advance, Man Robs Employer Of Rs 4.5 Lakh In Delhi",
+      "selector": "h2 a"
+    },
+    {
+      "url": "mailto:?subject=On Camera, Servitor At Delhis Kalkaji Temple Beaten To Death Over Prasad&body=Check out this link https://www.ndtv.com/india-news/on-camera-servitor-at-delhis-kalkaji-temple-beaten-to-death-over-prasad-9185084#pfrom=listing",
+      "text": "Email",
+      "selector": "article a"
+    },
+    {
+      "url": "mailto:?subject=Im A Kannadiga But...: Bengaluru Resident Feels Like Stranger In Own City Amid Cultural Shift&body=Check out this link https://www.ndtv.com/offbeat/im-a-kannadiga-but-bengaluru-resident-feels-like-stranger-in-own-city-amid-cultural-shift-9184703#pfrom=listing",
+      "text": "Email",
+      "selector": "article a"
+    },
+    {
+      "url": "mailto:?subject=Youre Dark: Techie Who Was Found Dead Was Taunted Over Skin Colour&body=Check out this link https://www.ndtv.com/india-news/bengaluru-techie-death-shilpa-panchangamath-pregnant-wife-dead-techie-turned-panipuri-seller-accused-of-dowry-abuse-9179075#pfrom=listing",
+      "text": "Email",
+      "selector": "article a"
+    },
+    {
+      "url": "mailto:?subject=Irish Dog Rescuer Was In India During Stray Dog Protests. What He Found&body=Check out this link https://www.ndtv.com/india-news/street-dogs-delhi-dog-shelters-niall-harbison-irish-dog-rescuer-was-in-india-during-stray-dog-protests-what-he-found-9174250#pfrom=listing",
+      "text": "Email",
+      "selector": "article a"
+    },
+    {
+      "url": "mailto:?subject=Denied Salary In Advance, Man Robs Employer Of Rs 4.5 Lakh In Delhi&body=Check out this link https://www.ndtv.com/india-news/denied-salary-in-advance-man-robs-employer-of-rs-4-5-lakh-in-delhi-9166349#pfrom=listing",
+      "text": "Email",
+      "selector": "article a"
+    },
+    {
+      "url": "https://www.ndtv.com/opinion/sco-summit-sends-trump-a-message-he-wont-like-9190061",
+      "text": "Opinion | SCO, And Why Trump Must Know The World Doesn't Really Dance To His Tunes",
+      "selector": "h2 a"
+    },
+    {
+      "url": "https://www.ndtv.com/opinion/sco-summit-trump-shanghais-the-world-to-tianjin-9185653",
+      "text": "Opinion | Trump Shanghais The World To Tianjin",
+      "selector": "h2 a"
+    },
+    {
+      "url": "https://www.ndtv.com/opinion/indias-talent-meets-japans-tech-and-why-china-should-be-worried-9185297",
+      "text": "Opinion | India's Brains Meet Japan's Tech - And Why China Should Be Worried",
+      "selector": "h2 a"
+    },
+    {
+      "url": "https://www.ndtv.com/opinion/trump-is-indeed-making-a-country-great-again-but-its-china-9182187",
+      "text": "Opinion | Trump Is Indeed Making A Country Great Again. But It's China",
+      "selector": "h2 a"
+    },
+    {
+      "url": "https://www.ndtv.com/opinion/opinion-using-india-as-a-punching-bag-not-happening-mr-trump-9179744",
+      "text": "Opinion | Trump Has Miscalculated That India Is A Softer Target Than China",
+      "selector": "h2 a"
+    },
+    {
+      "url": "https://www.ndtv.com/opinion/after-new-tariffs-trust-between-us-and-india-is-running-low-9175078",
+      "text": "Opinion | After New Tariffs, Trust Between US And India Is Running Low",
+      "selector": "h2 a"
+    },
+    {
+      "url": "https://www.ndtv.com/opinion/as-trump-shuts-us-door-here-are-3-places-that-can-save-indias-exports-9174572",
+      "text": "Opinion | As Trump Shuts US Doors, Here Are 3 Places That Can Save India's Exports",
+      "selector": "h2 a"
+    },
+    {
+      "url": "https://www.ndtv.com/opinion/not-a-t20-but-a-test-why-india-must-play-the-long-innings-with-trump-9173120",
+      "text": "Opinion | Not A T20, But A Test: Why India Must Play The Long Innings With Trump",
+      "selector": "h2 a"
+    },
+    {
+      "url": "https://www.ndtv.com/opinion/two-years-after-october-7-why-cant-israel-defeat-hamas-9169030",
+      "text": "Opinion | Two Years After October 7, Why Can't Israel Defeat Hamas?",
+      "selector": "h2 a"
+    },
+    {
+      "url": "https://www.ndtv.com/opinion/from-panic-to-principle-why-we-need-to-rethink-the-stray-dog-debate-9162962",
+      "text": "Opinion | From Panic To Principle: Why We Need To Rethink The Stray Dog Debate",
+      "selector": "h2 a"
+    },
+    {
+      "url": "https://www.ndtv.com/opinion/irony-19-dowry-deaths-a-day-yet-mens-rights-groups-want-law-scrapped-9161884",
+      "text": "Opinion | Irony: 19 Dowry Deaths A Day, Yet 'Men's Rights' Groups Want Law Scrapped",
+      "selector": "h2 a"
+    },
+    {
+      "url": "https://www.ndtv.com/opinion/plato-in-indian-parliament-and-empty-vessels-9160717",
+      "text": "Opinion | Plato In Indian Parliament: Which Are The Empty Vessels Making The Most Noise?",
+      "selector": "h2 a"
+    },
+    {
+      "url": "https://www.ndtv.com/opinion/wang-yi-in-india-pakistan-afghanistan-whats-going-on-behind-the-scenes-9156401",
+      "text": "Opinion | India To Kabul To Pak: The Plot Behind Chinese Foreign Minister's Many Tours",
+      "selector": "h2 a"
+    },
+    {
+      "url": "https://www.ndtv.com/opinion/trumps-hollow-claims-heres-where-india-and-china-really-buy-their-oil-from-9154522",
+      "text": "Opinion | Trump's Hollow Claims: Here's Where India - And China - Really Buy Their Oil From",
+      "selector": "h2 a"
+    },
+    {
+      "url": "https://www.ndtv.com/opinion/10-ways-bjp-is-trying-to-wrest-bengal-from-tmc-this-time-9153108",
+      "text": "Opinion | BJP's 10 Big Strategies To Wrest Bengal From TMC This Time",
+      "selector": "h2 a"
+    },
+    {
+      "url": "https://www.ndtv.com/opinion/why-joint-parliamentary-committees-are-an-exercise-in-futility-9145200",
+      "text": "Opinion | Why Joint Parliamentary Committees Are An Exercise In Futility",
+      "selector": "h2 a"
+    },
+    {
+      "url": "https://www.ndtv.com/opinion/india-china-and-an-awkward-marriage-of-convenience-9137404",
+      "text": "Opinion | The India-China Thaw Needs Eyes Wide Open",
+      "selector": "h2 a"
+    },
+    {
+      "url": "https://www.ndtv.com/opinion/boomers-are-the-next-big-consumer-culture-frontier-9137128",
+      "text": "Boomers Are The Next Big Consumer Culture Frontier",
+      "selector": "h2 a"
+    },
+    {
+      "url": "https://www.ndtv.com/opinion/alien-pajeet-browns-off-cliffs-how-indians-became-the-most-hated-diaspora-9130685",
+      "text": "Opinion | 'Alien', 'Pajeet', 'Browns Off Cliffs': How Indians Became The Most Hated Diaspora",
+      "selector": "h2 a"
+    },
+    {
+      "url": "https://www.ndtv.com/opinion/play-safe-how-india-plans-to-regulate-its-gaming-boom-9129164",
+      "text": "Opinion | Addiction, Laundering, Suicides: Why Real-Money Gaming Had To Go",
+      "selector": "h2 a"
+    },
+    {
+      "url": "mailto:?subject=Opinion  SCO, And Why Trump Must Know The World Doesn\\'t Really Dance To His Tunes&body=Check out this link https://www.ndtv.com/opinion/sco-summit-sends-trump-a-message-he-wont-like-9190061",
+      "text": "Email",
+      "selector": "article a"
+    },
+    {
+      "url": "mailto:?subject=Opinion  Trump Shanghais The World To Tianjin&body=Check out this link https://www.ndtv.com/opinion/sco-summit-trump-shanghais-the-world-to-tianjin-9185653",
+      "text": "Email",
+      "selector": "article a"
+    },
+    {
+      "url": "mailto:?subject=Opinion  India\\'s Brains Meet Japan\\'s Tech - And Why China Should Be Worried&body=Check out this link https://www.ndtv.com/opinion/indias-talent-meets-japans-tech-and-why-china-should-be-worried-9185297",
+      "text": "Email",
+      "selector": "article a"
+    },
+    {
+      "url": "mailto:?subject=Opinion  Trump Is Indeed Making A Country Great Again. But It\\'s China&body=Check out this link https://www.ndtv.com/opinion/trump-is-indeed-making-a-country-great-again-but-its-china-9182187",
+      "text": "Email",
+      "selector": "article a"
+    },
+    {
+      "url": "mailto:?subject=Opinion  Trump Has Miscalculated That India Is A Softer Target Than China&body=Check out this link https://www.ndtv.com/opinion/opinion-using-india-as-a-punching-bag-not-happening-mr-trump-9179744",
+      "text": "Email",
+      "selector": "article a"
+    },
+    {
+      "url": "mailto:?subject=Opinion  After New Tariffs, Trust Between US And India Is Running Low&body=Check out this link https://www.ndtv.com/opinion/after-new-tariffs-trust-between-us-and-india-is-running-low-9175078",
+      "text": "Email",
+      "selector": "article a"
+    },
+    {
+      "url": "mailto:?subject=Opinion  As Trump Shuts US Doors, Here Are 3 Places That Can Save India\\'s Exports&body=Check out this link https://www.ndtv.com/opinion/as-trump-shuts-us-door-here-are-3-places-that-can-save-indias-exports-9174572",
+      "text": "Email",
+      "selector": "article a"
+    },
+    {
+      "url": "mailto:?subject=Opinion  Not A T20, But A Test: Why India Must Play The Long Innings With Trump&body=Check out this link https://www.ndtv.com/opinion/not-a-t20-but-a-test-why-india-must-play-the-long-innings-with-trump-9173120",
+      "text": "Email",
+      "selector": "article a"
+    },
+    {
+      "url": "mailto:?subject=Opinion  Two Years After October 7, Why Can\\'t Israel Defeat Hamas?&body=Check out this link https://www.ndtv.com/opinion/two-years-after-october-7-why-cant-israel-defeat-hamas-9169030",
+      "text": "Email",
+      "selector": "article a"
+    },
+    {
+      "url": "mailto:?subject=Opinion  From Panic To Principle: Why We Need To Rethink The Stray Dog Debate&body=Check out this link https://www.ndtv.com/opinion/from-panic-to-principle-why-we-need-to-rethink-the-stray-dog-debate-9162962",
+      "text": "Email",
+      "selector": "article a"
+    },
+    {
+      "url": "mailto:?subject=Opinion  Irony: 19 Dowry Deaths A Day, Yet \\'Men\\'s Rights\\' Groups Want Law Scrapped&body=Check out this link https://www.ndtv.com/opinion/irony-19-dowry-deaths-a-day-yet-mens-rights-groups-want-law-scrapped-9161884",
+      "text": "Email",
+      "selector": "article a"
+    },
+    {
+      "url": "mailto:?subject=Opinion  Plato In Indian Parliament: Which Are The Empty Vessels Making The Most Noise?&body=Check out this link https://www.ndtv.com/opinion/plato-in-indian-parliament-and-empty-vessels-9160717",
+      "text": "Email",
+      "selector": "article a"
+    },
+    {
+      "url": "mailto:?subject=Opinion  India To Kabul To Pak: The Plot Behind Chinese Foreign Minister\\'s Many Tours&body=Check out this link https://www.ndtv.com/opinion/wang-yi-in-india-pakistan-afghanistan-whats-going-on-behind-the-scenes-9156401",
+      "text": "Email",
+      "selector": "article a"
+    },
+    {
+      "url": "mailto:?subject=Opinion  Trump\\'s Hollow Claims: Here\\'s Where India - And China - Really Buy Their Oil From&body=Check out this link https://www.ndtv.com/opinion/trumps-hollow-claims-heres-where-india-and-china-really-buy-their-oil-from-9154522",
+      "text": "Email",
+      "selector": "article a"
+    },
+    {
+      "url": "mailto:?subject=Opinion  BJP\\'s 10 Big Strategies To Wrest Bengal From TMC This Time&body=Check out this link https://www.ndtv.com/opinion/10-ways-bjp-is-trying-to-wrest-bengal-from-tmc-this-time-9153108",
+      "text": "Email",
+      "selector": "article a"
+    },
+    {
+      "url": "mailto:?subject=Opinion  Why Joint Parliamentary Committees Are An Exercise In Futility&body=Check out this link https://www.ndtv.com/opinion/why-joint-parliamentary-committees-are-an-exercise-in-futility-9145200",
+      "text": "Email",
+      "selector": "article a"
+    },
+    {
+      "url": "mailto:?subject=Opinion  The India-China Thaw Needs Eyes Wide Open&body=Check out this link https://www.ndtv.com/opinion/india-china-and-an-awkward-marriage-of-convenience-9137404",
+      "text": "Email",
+      "selector": "article a"
+    },
+    {
+      "url": "mailto:?subject=Boomers Are The Next Big Consumer Culture Frontier&body=Check out this link https://www.ndtv.com/opinion/boomers-are-the-next-big-consumer-culture-frontier-9137128",
+      "text": "Email",
+      "selector": "article a"
+    },
+    {
+      "url": "mailto:?subject=Opinion  \\'Alien\\', \\'Pajeet\\', \\'Browns Off Cliffs\\': How Indians Became The Most Hated Diaspora&body=Check out this link https://www.ndtv.com/opinion/alien-pajeet-browns-off-cliffs-how-indians-became-the-most-hated-diaspora-9130685",
+      "text": "Email",
+      "selector": "article a"
+    },
+    {
+      "url": "mailto:?subject=Opinion  Addiction, Laundering, Suicides: Why Real-Money Gaming Had To Go&body=Check out this link https://www.ndtv.com/opinion/play-safe-how-india-plans-to-regulate-its-gaming-boom-9129164",
+      "text": "Email",
+      "selector": "article a"
+    },
+    {
+      "url": "https://www.ndtv.com/offbeat/indian-billboard-goes-viral-for-cheeky-elon-musk-uranus-wordplay-internet-calls-it-hilarious-9194476",
+      "text": "Indian Billboard Goes Viral For Elon Musk, Uranus Wordplay, Internet Calls It 'Hilarious'",
+      "selector": "h2 a"
+    },
+    {
+      "url": "https://www.ndtv.com/offbeat/watch-bengaluru-professors-stunning-dance-on-iconic-bollywood-song-goes-viral-9194408",
+      "text": "Watch: Bengaluru Professor's Stunning Dance On Iconic Bollywood Song Goes Viral",
+      "selector": "h2 a"
+    },
+    {
+      "url": "https://www.ndtv.com/offbeat/delhi-womans-thank-you-to-man-in-metro-turns-into-a-creepy-encounter-ill-think-twice-9194127",
+      "text": "Delhi Woman's 'Thank You' To Man In Metro Turns Into A Creepy Encounter: 'I'll Think Twice...'",
+      "selector": "h2 a"
+    },
+    {
+      "url": "https://www.ndtv.com/offbeat/95-organisations-get-zero-return-from-using-ai-tools-mit-study-shows-9193724",
+      "text": "95% Organisations Get Zero Return From Using AI Tools, MIT Study Shows",
+      "selector": "h2 a"
+    },
+    {
+      "url": "https://www.ndtv.com/offbeat/chinese-boy-with-terminal-illnesses-writes-gut-wrenching-letter-to-mother-lets-return-the-medicines-9193721",
+      "text": "Chinese Boy With Terminal Illnesses Writes Gut-Wrenching Letter To Mother: \"Let's Return The Medicines\"",
+      "selector": "h2 a"
+    },
+    {
+      "url": "https://www.ndtv.com/offbeat/employer-rants-about-gen-zs-entitlement-at-work-calls-it-generational-difference-9193602",
+      "text": "Employer Rants About Gen Z's 'Entitlement' At Work, Calls It 'Generational Difference'",
+      "selector": "h2 a"
+    },
+    {
+      "url": "https://www.ndtv.com/offbeat/bengaluru-man-sitting-on-footpath-seeks-help-claims-to-have-14-year-banking-experience-9192081",
+      "text": "Bengaluru Man Sitting On Footpath Seeks Help, Claims To Have 14-Year Banking Experience",
+      "selector": "h2 a"
+    },
+    {
+      "url": "https://www.ndtv.com/offbeat/wow-kiran-mazumdar-shaw-praises-chewie-robot-that-transforms-kitchen-waste-into-soil-9191731",
+      "text": "\"Wow\": Kiran Mazumdar-Shaw Praises 'Chewie' Robot That Transforms Kitchen Waste Into Soil",
+      "selector": "h2 a"
+    },
+    {
+      "url": "https://www.ndtv.com/offbeat/viral-video-emirates-employee-gets-omega-watch-for-20-years-of-service-his-reaction-melts-hearts-9191283",
+      "text": "Emirates Employee Gets Omega Watch For 20 Years Of Service, His Reaction Melts Hearts",
+      "selector": "h2 a"
+    },
+    {
+      "url": "https://www.ndtv.com/offbeat/bengaluru-schools-rs-7-35-lakh-fee-for-grade-1-sparks-debate-india-is-a-land-of-extremities-9191152",
+      "text": "Bengaluru School's Rs 7.35 Lakh Fee For Grade 1 Sparks Debate: \"India Is A Land Of Extremities\"",
+      "selector": "h2 a"
+    },
+    {
+      "url": "https://www.ndtv.com/offbeat/chinese-woman-sarcastically-praises-best-friend-for-sleeping-with-her-husband-displays-banners-9190782",
+      "text": "Chinese Woman Sarcastically Praises Best Friend For \"Sleeping\" With Her Husband, Displays Banners",
+      "selector": "h2 a"
+    },
+    {
+      "url": "https://www.ndtv.com/offbeat/emotional-video-shows-indigo-pilot-welcoming-family-as-they-board-flight-it-felt-like-life-9190531",
+      "text": "Emotional Video Shows IndiGo Pilot Welcoming Family As They Board Flight: \"It Felt Like Life...\"",
+      "selector": "h2 a"
+    },
+    {
+      "url": "https://www.ndtv.com/offbeat/indian-woman-reveals-why-she-is-leaving-london-after-living-there-for-a-decade-survival-issues-9190444",
+      "text": "Indian Woman Reveals Why She Is Leaving London After Living There For A Decade: \"Survival Issues\"",
+      "selector": "h2 a"
+    },
+    {
+      "url": "https://www.ndtv.com/offbeat/japanese-grandma-83-completely-enchanted-by-her-23-year-old-boyfriend-9190285",
+      "text": "Japanese Grandma, 83, 'Completely Enchanted' By Her 23-Year-Old Boyfriend",
+      "selector": "h2 a"
+    },
+    {
+      "url": "https://www.ndtv.com/offbeat/downed-ukrainian-drone-sparks-massive-forest-fires-near-vladimir-putins-mysterious-palace-9190220",
+      "text": "Downed Ukrainian Drone Sparks Massive Forest Fires Near Vladimir Putin's Mysterious Palace",
+      "selector": "h2 a"
+    },
+    {
+      "url": "https://www.ndtv.com/offbeat/watch-man-boosts-salary-from-rs-4-lakh-to-rs-12-lakh-by-editing-payslips-internet-reacts-9189743",
+      "text": "Watch: Man Boosts Salary From Rs 4 Lakh to Rs 12 Lakh By Editing Payslips, Internet Reacts",
+      "selector": "h2 a"
+    },
+    {
+      "url": "https://www.ndtv.com/offbeat/toilet-trouble-in-virgin-australia-flight-as-passengers-forced-to-urinate-in-bottles-mid-flight-9189405",
+      "text": "Toilet Trouble In Virgin Australia Flight As Passengers Forced To Urinate In Bottles Mid-Flight",
+      "selector": "h2 a"
+    },
+    {
+      "url": "https://www.ndtv.com/offbeat/feeling-heartbroken-surprising-way-to-heal-your-heart-revealed-by-scientists-9189359",
+      "text": "Feeling Heartbroken? Surprising Way To Heal Your Heart Revealed By Scientists",
+      "selector": "h2 a"
+    },
+    {
+      "url": "https://www.ndtv.com/offbeat/23-year-old-duo-rohan-vasishth-and-faraz-siddiqi-exited-amazon-and-microsoft-to-build-ai-startup-raised-4-million-9189334",
+      "text": "23-Year-Old Duo Exited Amazon And Microsoft To Build AI Startup, Raised $4 million",
+      "selector": "h2 a"
+    },
+    {
+      "url": "mailto:?subject=Indian Billboard Goes Viral For Elon Musk, Uranus Wordplay, Internet Calls It Hilarious&body=Check out this link https://www.ndtv.com/offbeat/indian-billboard-goes-viral-for-cheeky-elon-musk-uranus-wordplay-internet-calls-it-hilarious-9194476#pfrom=listing",
+      "text": "Email",
+      "selector": "article a"
+    },
+    {
+      "url": "mailto:?subject=Watch: Bengaluru Professors Stunning Dance On Iconic Bollywood Song Goes Viral&body=Check out this link https://www.ndtv.com/offbeat/watch-bengaluru-professors-stunning-dance-on-iconic-bollywood-song-goes-viral-9194408#pfrom=listing",
+      "text": "Email",
+      "selector": "article a"
+    },
+    {
+      "url": "mailto:?subject=Delhi Womans Thank You To Man In Metro Turns Into A Creepy Encounter: Ill Think Twice...&body=Check out this link https://www.ndtv.com/offbeat/delhi-womans-thank-you-to-man-in-metro-turns-into-a-creepy-encounter-ill-think-twice-9194127#pfrom=listing",
+      "text": "Email",
+      "selector": "article a"
+    },
+    {
+      "url": "mailto:?subject=Thats The American Dream: New York Governor Lauds Indian Chefs Success Amid Immigration Debate&body=Check out this link https://www.ndtv.com/offbeat/thats-the-american-dream-new-york-governor-lauds-indian-chefs-success-amid-immigration-debate-9193903#pfrom=listing",
+      "text": "Email",
+      "selector": "article a"
+    },
+    {
+      "url": "mailto:?subject=95% Organisations Get Zero Return From Using AI Tools, MIT Study Shows&body=Check out this link https://www.ndtv.com/offbeat/95-organisations-get-zero-return-from-using-ai-tools-mit-study-shows-9193724#pfrom=listing",
+      "text": "Email",
+      "selector": "article a"
+    },
+    {
+      "url": "mailto:?subject=Chinese Boy With Terminal Illnesses Writes Gut-Wrenching Letter To Mother: Lets Return The Medicines&body=Check out this link https://www.ndtv.com/offbeat/chinese-boy-with-terminal-illnesses-writes-gut-wrenching-letter-to-mother-lets-return-the-medicines-9193721#pfrom=listing",
+      "text": "Email",
+      "selector": "article a"
+    },
+    {
+      "url": "mailto:?subject=Employer Rants About Gen Zs Entitlement At Work, Calls It Generational Difference&body=Check out this link https://www.ndtv.com/offbeat/employer-rants-about-gen-zs-entitlement-at-work-calls-it-generational-difference-9193602#pfrom=listing",
+      "text": "Email",
+      "selector": "article a"
+    },
+    {
+      "url": "mailto:?subject=Bengaluru Man Sitting On Footpath Seeks Help, Claims To Have 14-Year Banking Experience&body=Check out this link https://www.ndtv.com/offbeat/bengaluru-man-sitting-on-footpath-seeks-help-claims-to-have-14-year-banking-experience-9192081#pfrom=listing",
+      "text": "Email",
+      "selector": "article a"
+    },
+    {
+      "url": "mailto:?subject=Wow: Kiran Mazumdar-Shaw Praises Chewie Robot That Transforms Kitchen Waste Into Soil&body=Check out this link https://www.ndtv.com/offbeat/wow-kiran-mazumdar-shaw-praises-chewie-robot-that-transforms-kitchen-waste-into-soil-9191731#pfrom=listing",
+      "text": "Email",
+      "selector": "article a"
+    },
+    {
+      "url": "mailto:?subject=Emirates Employee Gets Omega Watch For 20 Years Of Service, His Reaction Melts Hearts&body=Check out this link https://www.ndtv.com/offbeat/viral-video-emirates-employee-gets-omega-watch-for-20-years-of-service-his-reaction-melts-hearts-9191283#pfrom=listing",
+      "text": "Email",
+      "selector": "article a"
+    },
+    {
+      "url": "mailto:?subject=Bengaluru Schools Rs 7.35 Lakh Fee For Grade 1 Sparks Debate: India Is A Land Of Extremities&body=Check out this link https://www.ndtv.com/offbeat/bengaluru-schools-rs-7-35-lakh-fee-for-grade-1-sparks-debate-india-is-a-land-of-extremities-9191152#pfrom=listing",
+      "text": "Email",
+      "selector": "article a"
+    },
+    {
+      "url": "mailto:?subject=Chinese Woman Sarcastically Praises Best Friend For Sleeping With Her Husband, Displays Banners&body=Check out this link https://www.ndtv.com/offbeat/chinese-woman-sarcastically-praises-best-friend-for-sleeping-with-her-husband-displays-banners-9190782#pfrom=listing",
+      "text": "Email",
+      "selector": "article a"
+    },
+    {
+      "url": "mailto:?subject=Emotional Video Shows IndiGo Pilot Welcoming Family As They Board Flight: It Felt Like Life...&body=Check out this link https://www.ndtv.com/offbeat/emotional-video-shows-indigo-pilot-welcoming-family-as-they-board-flight-it-felt-like-life-9190531#pfrom=listing",
+      "text": "Email",
+      "selector": "article a"
+    },
+    {
+      "url": "mailto:?subject=Indian Woman Reveals Why She Is Leaving London After Living There For A Decade: Survival Issues&body=Check out this link https://www.ndtv.com/offbeat/indian-woman-reveals-why-she-is-leaving-london-after-living-there-for-a-decade-survival-issues-9190444#pfrom=listing",
+      "text": "Email",
+      "selector": "article a"
+    },
+    {
+      "url": "mailto:?subject=Japanese Grandma, 83, Completely Enchanted By Her 23-Year-Old Boyfriend&body=Check out this link https://www.ndtv.com/offbeat/japanese-grandma-83-completely-enchanted-by-her-23-year-old-boyfriend-9190285#pfrom=listing",
+      "text": "Email",
+      "selector": "article a"
+    },
+    {
+      "url": "mailto:?subject=Downed Ukrainian Drone Sparks Massive Forest Fires Near Vladimir Putins Mysterious Palace&body=Check out this link https://www.ndtv.com/offbeat/downed-ukrainian-drone-sparks-massive-forest-fires-near-vladimir-putins-mysterious-palace-9190220#pfrom=listing",
+      "text": "Email",
+      "selector": "article a"
+    },
+    {
+      "url": "mailto:?subject=Watch: Man Boosts Salary From Rs 4 Lakh to Rs 12 Lakh By Editing Payslips, Internet Reacts&body=Check out this link https://www.ndtv.com/offbeat/watch-man-boosts-salary-from-rs-4-lakh-to-rs-12-lakh-by-editing-payslips-internet-reacts-9189743#pfrom=listing",
+      "text": "Email",
+      "selector": "article a"
+    },
+    {
+      "url": "mailto:?subject=Toilet Trouble In Virgin Australia Flight As Passengers Forced To Urinate In Bottles Mid-Flight&body=Check out this link https://www.ndtv.com/offbeat/toilet-trouble-in-virgin-australia-flight-as-passengers-forced-to-urinate-in-bottles-mid-flight-9189405#pfrom=listing",
+      "text": "Email",
+      "selector": "article a"
+    },
+    {
+      "url": "mailto:?subject=Feeling Heartbroken? Surprising Way To Heal Your Heart Revealed By Scientists&body=Check out this link https://www.ndtv.com/offbeat/feeling-heartbroken-surprising-way-to-heal-your-heart-revealed-by-scientists-9189359#pfrom=listing",
+      "text": "Email",
+      "selector": "article a"
+    },
+    {
+      "url": "mailto:?subject=23-Year-Old Duo Exited Amazon And Microsoft To Build AI Startup, Raised $4 million&body=Check out this link https://www.ndtv.com/offbeat/23-year-old-duo-rohan-vasishth-and-faraz-siddiqi-exited-amazon-and-microsoft-to-build-ai-startup-raised-4-million-9189334#pfrom=listing",
+      "text": "Email",
+      "selector": "article a"
+    }
+  ],
+  "Times of India": [],
+  "Economic Times": [
+    {
+      "url": "https://economictimes.indiatimes.com/markets/stocks/news/auto-ancillary-sector-delivered-6-multibaggers-in-6-months-can-you-still-catch-them/articleshow/123625737.cms",
+      "text": "Auto ancillary pack gave 6 multibaggers in 6 months. Can you still catch them?",
+      "selector": "h2 a"
+    },
+    {
+      "url": "https://economictimes.indiatimes.com/markets/stocks/news/anondita-medicare-shares-to-debut-on-nse-sme-today-gmp-suggests-robust-listing-potential/articleshow/123624145.cms",
+      "text": "Stellar Start! Anondita Medicare debuts with 90% premium over the IPO price",
+      "selector": "h2 a"
+    }
+  ],
+  "News18": [
+    {
+      "url": "https://www.news18.com/world/insightful-conversation-pm-modi-travels-with-putin-in-same-car-for-bilateral-talks-after-sco-9540705.html",
+      "text": "'Insightful Conversation': PM Modi Travels With Putin In Same Car For Bilateral Talks After SCO",
+      "selector": "h3 a"
+    },
+    {
+      "url": "https://www.news18.com/india/tianjin-declaration-condemns-pahalgam-terror-attack-china-sco-summit-tianjin-shanghai-cooperation-organisation-9540699.html",
+      "text": "'Perpetrators Must Be Brought To Justice': Tianjin SCO Declaration Condemns Pahalgam Attack",
+      "selector": "h3 a"
+    },
+    {
+      "url": "https://www.news18.com/world/pm-modi-sco-summit-2025-live-updates-narendra-modi-china-visit-today-xi-jinping-vladimir-putin-tianjin-trump-tariffs-india-latest-news-liveblog-9540313.html",
+      "text": "PM Modi SCO Summit LIVE: PM Modi's Bilateral Meeting With Russian President Putin To Begin Shortly",
+      "selector": "h3 a"
+    },
+    {
+      "url": "https://www.news18.com/world/pm-narendra-modi-vladmir-putin-walk-past-shehbaz-sharif-video-sco-summit-tianjin-china-9540439.html",
+      "text": "Shehbaz Sharif Looks On As PM Modi, Putin Walk Past Him At SCO Summit In China's Tianjin | Video",
+      "selector": "h3 a"
+    },
+    {
+      "url": "https://www.news18.com/world/brahmins-profiteering-trump-advisor-peter-navarros-shocker-on-indias-russian-oil-purchases-donal-trump-9540339.html",
+      "text": "‘Brahmins Profiteering...’: Trump Advisor Peter Navarro’s Shocker On India’s Russian Oil Purchases",
+      "selector": "h3 a"
+    },
+    {
+      "url": "https://www.news18.com/world/from-conversation-to-hugs-pm-modi-chinas-xi-russias-putin-sco-summit-pictures-leaders-watch-9540388.html",
+      "text": "Chit-Chat & A Hug: PM Modi, Xi Jinping, Vladimir Putin Clicked Together At SCO Summit",
+      "selector": "h3 a"
+    },
+    {
+      "url": "https://www.news18.com/world/nine-killed-after-6-0-magnitude-earthquake-strikes-south-eastern-afghanistan-ws-l-9540297.html",
+      "text": "Over 500 Killed, 1000 Injured After 6.0 Magnitude Earthquake Strikes South-Eastern Afghanistan",
+      "selector": "h3 a"
+    },
+    {
+      "url": "https://www.news18.com/world/vladimir-putin-tianjin-china-sco-summit-address-russia-ukraine-war-india-efforts-resolving-crisis-9540613.html",
+      "text": "'Russia Values Efforts Of India In Resolving Ukraine Crisis': Putin At SCO Summit In Tianjin",
+      "selector": "h3 a"
+    },
+    {
+      "url": "https://www.news18.com/india/after-meeting-putin-in-china-not-donald-trump-but-pm-modi-may-end-russia-ukraine-war-ws-l-9540280.html",
+      "text": "PM Modi, Not Donald Trump, May End Russia-Ukraine War After Meeting Putin In China",
+      "selector": "h3 a"
+    },
+    {
+      "url": "https://www.news18.com/world/never-felt-better-in-my-life-us-president-reacts-to-trump-is-dead-viral-claim-ws-l-9540328.html",
+      "text": "‘Never Felt Better In My Life’: US President Reacts To 'Trump Is Dead' Viral Claim",
+      "selector": "h3 a"
+    },
+    {
+      "url": "https://www.news18.com/world/man-arrested-after-car-rams-gates-of-russian-consulate-in-sydney-9540305.html",
+      "text": "Man Arrested After Car Rams Gates Of Russian Consulate In Sydney",
+      "selector": "h3 a"
+    },
+    {
+      "url": "https://www.news18.com/business/markets/stock-market-updates-gift-nifty-signals-a-positive-start-for-sensex-nifty-3-9540441.html",
+      "text": "Stock Market Updates: Sensex Climbs Over 300 Points, Nifty Above 24,500; Infosys, Power Grid Rise 2%",
+      "selector": "h3 a"
+    },
+    {
+      "url": "https://www.news18.com/business/markets/pg-electroplast-rallies-3-after-rs-1000-cr-pact-with-maharashtra-govt-9540598.html",
+      "text": "PG Electroplast Rallies 3% After Rs 1,000 Cr Pact With Maharashtra Govt",
+      "selector": "h3 a"
+    },
+    {
+      "url": "https://www.news18.com/business/ipo/tata-capital-to-launch-rs-17200-crore-ipo-in-last-week-of-september-likely-market-debut-on-sept-30-ws-l-9539871.html",
+      "text": "Tata Capital To Launch Rs 17,200 Crore IPO, Market Debut Likely On Sept 30",
+      "selector": "h3 a"
+    },
+    {
+      "url": "https://www.news18.com/politics/disgraceful-war-of-words-between-bjp-tmc-over-mahua-moitras-hate-remarks-against-amit-shah-ws-l-9539985.html",
+      "text": "‘Disgraceful…: War of Words Between BJP, TMC Over Mahua Moitra’s Hate Remarks Against Amit Shah",
+      "selector": "h3 a"
+    },
+    {
+      "url": "https://www.news18.com/politics/will-appeal-to-all-mps-oppn-vp-pick-sudershan-reddy-aims-for-cross-party-support-9539042.html",
+      "text": "'Will Appeal To All MPs': Oppn VP Pick Sudershan Reddy Aims For Cross-Party Support",
+      "selector": "h3 a"
+    },
+    {
+      "url": "https://www.news18.com/politics/tejashwi-yadav-declares-himself-cm-face-in-bihar-in-presence-of-rahul-gandhi-akhilesh-yadav-ws-l-9538884.html",
+      "text": "Tejashwi Yadav Declares Himself CM Face In Bihar In Presence Of Rahul Gandhi, Akhilesh Yadav",
+      "selector": "h3 a"
+    },
+    {
+      "url": "https://www.news18.com/india/rahul-gandhi-offers-candies-to-protestors-waving-black-flags-during-bihar-yatra-watch-ws-l-9538575.html",
+      "text": "Rahul Gandhi Offers Candies To Protestors Waving Black Flags During Bihar Yatra | Watch",
+      "selector": "h3 a"
+    },
+    {
+      "url": "https://www.news18.com/world/this-game-changing-ai-powered-stethoscope-promises-rapid-15-second-heart-check-ws-kl-9538830.html",
+      "text": "This 'Game Changing' AI-Powered Stethoscope Promises Rapid 15-Second Heart Check",
+      "selector": "h3 a"
+    }
+  ]
+}

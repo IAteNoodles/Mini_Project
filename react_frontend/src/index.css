@@ -1,0 +1,18 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  background: radial-gradient(circle at top left, #ffe5f1, #f0f4ff 55%, #fafafa);
+  min-height: 100vh;
+}
+
+.heatmap-container svg {
+  display: block;
+  margin: 0 auto;
+  max-width: 100%;
+}
+
+.heatmap-container {
+  font-family: 'Inter', system-ui, sans-serif;
+}

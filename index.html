@@ -482,20 +482,10 @@
                     articleDiv.innerHTML = `
                         <h3><a href="${article.url}" target="_blank" rel="noopener noreferrer">${article.title}</a></h3>
                         <p>${article.description || 'No description available.'}</p>
-                        <button class="fill-form-btn" data-url="${article.url}" data-content="${article.content || article.description || ''}">Fill Form</button>
                     `;
                     newsResults.appendChild(articleDiv);
                 });
             }
-
-            newsResults.addEventListener('click', function(event) {
-                if (event.target.classList.contains('fill-form-btn')) {
-                    const button = event.target;
-                    document.getElementById('url').value = button.dataset.url;
-                    document.getElementById('news_article').value = button.dataset.content;
-                    window.scrollTo({ top: 0, behavior: 'smooth' });
-                }
-            });
 
             viewArticlesBtn.addEventListener('click', () => {
                 if (articlesList.style.display === 'none' || articlesList.innerHTML === '') {

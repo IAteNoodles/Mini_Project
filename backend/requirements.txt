@@ -8,3 +8,11 @@ datasets
 mysql
 mysql-connector-python
 requests
+ollama
+torch
+transformers
+shap
+lime
+numpy
+scikit-learn
+scipy
