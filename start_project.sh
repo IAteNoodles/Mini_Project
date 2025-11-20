@@ -55,8 +55,8 @@ fi
 
 # 3. Model Setup
 echo -e "\n${GREEN}[3/5] Checking AI Models...${NC}"
-echo "Pulling Ollama model 'granite4:3b'..."
-ollama pull granite4:3b >> "$SETUP_LOG" 2>&1
+echo "Pulling Ollama model 'granite4:micro-h'..."
+ollama pull granite4:micro-h >> "$SETUP_LOG" 2>&1
 
 # 4. Start Backend
 echo -e "\n${GREEN}[4/5] Starting Backend Server...${NC}"
