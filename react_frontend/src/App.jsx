@@ -3,6 +3,7 @@ import axios from 'axios'
 import { motion, AnimatePresence } from 'framer-motion'
 import { Bar } from 'react-chartjs-2'
 import ReactMarkdown from 'react-markdown'
+import remarkGfm from 'remark-gfm'
 import {
   Chart as ChartJS,
   CategoryScale,
@@ -303,7 +304,10 @@ function App() {
                 {narrative ? (
                   <div className="text-gray-700">
                     <ReactMarkdown
+                      remarkPlugins={[remarkGfm]}
                       components={{
+                        h1: ({node, ...props}) => <h1 className="text-2xl font-bold text-gray-900 mt-6 mb-4" {...props} />,
+                        h2: ({node, ...props}) => <h2 className="text-xl font-bold text-gray-800 mt-5 mb-3" {...props} />,
                         h3: ({node, ...props}) => (
                           <h3 className="text-xs font-bold text-gray-500 uppercase tracking-widest mt-6 mb-3 flex items-center gap-2" {...props}>
                             <span className="w-1 h-3 bg-blue-500 rounded-full inline-block"></span>
@@ -311,14 +315,35 @@ function App() {
                           </h3>
                         ),
                         p: ({node, ...props}) => <p className="text-sm text-gray-600 mb-4 leading-relaxed" {...props} />,
-                        ul: ({node, ...props}) => <ul className="space-y-2 mb-6" {...props} />,
+                        ul: ({node, ...props}) => <ul className="space-y-2 mb-6 list-none" {...props} />,
+                        ol: ({node, ...props}) => <ol className="space-y-2 mb-6 list-decimal list-inside text-sm text-gray-600" {...props} />,
                         li: ({node, ...props}) => (
                           <li className="bg-gray-50/80 p-3 rounded-lg text-sm text-gray-700 border border-gray-100 shadow-sm flex gap-2">
-                            <span className="text-blue-400 mt-0.5">•</span>
+                            <span className="text-blue-400 mt-0.5 flex-shrink-0">•</span>
                             <span>{props.children}</span>
                           </li>
                         ),
                         strong: ({node, ...props}) => <span className="font-semibold text-gray-900 bg-blue-50/50 px-1 rounded" {...props} />,
+                        blockquote: ({node, ...props}) => <blockquote className="border-l-4 border-blue-500 pl-4 italic text-gray-600 my-4 bg-gray-50 py-2 pr-2 rounded-r" {...props} />,
+                        code: ({node, inline, className, children, ...props}) => {
+                          return inline ? (
+                            <code className="bg-gray-100 text-pink-600 px-1.5 py-0.5 rounded text-sm font-mono border border-gray-200" {...props}>{children}</code>
+                          ) : (
+                            <div className="overflow-x-auto mb-4 rounded-lg border border-gray-200 shadow-sm">
+                              <pre className="bg-gray-900 text-gray-100 p-4 text-sm font-mono">
+                                <code {...props}>{children}</code>
+                              </pre>
+                            </div>
+                          )
+                        },
+                        table: ({node, ...props}) => <div className="overflow-x-auto mb-6 rounded-lg border border-gray-200 shadow-sm"><table className="min-w-full divide-y divide-gray-200" {...props} /></div>,
+                        thead: ({node, ...props}) => <thead className="bg-gray-50" {...props} />,
+                        tbody: ({node, ...props}) => <tbody className="bg-white divide-y divide-gray-200" {...props} />,
+                        tr: ({node, ...props}) => <tr className="hover:bg-gray-50 transition-colors" {...props} />,
+                        th: ({node, ...props}) => <th className="px-4 py-3 text-left text-xs font-bold text-gray-500 uppercase tracking-wider" {...props} />,
+                        td: ({node, ...props}) => <td className="px-4 py-3 text-sm text-gray-700 whitespace-nowrap" {...props} />,
+                        a: ({node, ...props}) => <a className="text-blue-600 hover:underline font-medium" target="_blank" rel="noopener noreferrer" {...props} />,
+                        hr: ({node, ...props}) => <hr className="my-6 border-gray-200" {...props} />,
                       }}
                     >
                       {narrative}
