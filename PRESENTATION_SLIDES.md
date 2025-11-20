@@ -1,22 +1,17 @@
-# Presentation Slides Script
-**Project:** Media Bias Analysis System
-**Based on Template:** PhishGuard PPT
+# VISVESVARAYA TECHNOLOGICAL UNIVERSITY
+**Belagavi - 590 018**
 
----
-
-## Slide 1: Title Slide
-
-**[Center Alignment]**
-
-**VISVESVARAYA TECHNOLOGICAL UNIVERSITY**
-Belagavi - 590 018
-
-**(Logo Placeholder)**
+![VTU Logo Placeholder](vtu_logo.png)
 
 **Subject Code: [CODE] – Mini Project**
 
-# MEDIA BIAS ANALYSIS SYSTEM
-**AI-Powered Bias Detection & Explanation**
+# Presentation Slides: Media Bias Analysis System
+
+## Slide 1: Title Slide
+
+**MEDIA BIAS ANALYSIS SYSTEM**
+
+*(Mini Project - 18CSMP68)*
 
 **Presented By:**
 *   [Student Name 1] ([USN])
@@ -24,161 +19,308 @@ Belagavi - 590 018
 *   [Student Name 3] ([USN])
 *   [Student Name 4] ([USN])
 
-**Under the Guidance of:**
+**Guided By:**
 *   **Prof. [Name]**
 *   Assistant Professor
+*   Dept. of CSE (Data Science)
 
-**DEPARTMENT OF COMPUTER SCIENCE AND ENGINEERING (DATA SCIENCE)**
-**ACHARYA INSTITUTE OF TECHNOLOGY**
-**November 19, 2025**
+**Acharya Institute of Technology**
+*Visvesvaraya Technological University*
 
 ---
 
-## Slide 2: Content
+## Slide 2: Outline
 
-*   Abstract
-*   Problem Statement
 *   Introduction
-*   Objective
+*   Problem Statement
+*   Objectives
 *   Literature Survey
-*   System Architecture / Flow Diagram
+*   System Requirements
+*   System Architecture
 *   Methodology
 *   System Testing
-*   Results Discussion
-*   Demonstration of Prototype
-*   Future Works
-*   Conclusion
-*   References
+*   Results & Discussion
+*   Conclusion & Future Scope
 
 ---
 
-## Slide 3: Abstract
+## Slide 3: Introduction
 
-*   **The Challenge**: Traditional fact-checking fails against the speed and subtlety of modern digital media bias.
-*   **Our Solution**: An AI-powered detection system using **RoBERTa** (Deep Learning) with **Attention Mechanisms** and **Explainable AI (XAI)**.
-*   **Key Features**:
-    *   Real-time classification (Biased vs. Non-Biased).
-    *   Visual heatmaps (SHAP/LIME) showing *why* text is biased.
-    *   AI-generated narrative explanations via LLMs.
-*   **Impact**: Safeguards users from manipulation and promotes media literacy.
+*   **Overview**: Media bias is the polarized presentation of news, often subtle and manipulative.
+*   **The Need**: In the era of "Fake News", detecting *bias* (slanted truth) is as important as detecting falsehoods.
+*   **Our Solution**: An AI-powered web app that detects bias and explains *why* using Explainable AI (XAI).
 
 ---
 
 ## Slide 4: Problem Statement
 
-*   **Information Overload**: Millions of articles are published daily; manual verification is impossible.
-*   **Subtle Manipulation**: Bias isn't just "fake news"—it's framing, tone, and omission.
-*   **Black Box AI**: Existing tools give a score but don't explain the "why," leading to user distrust.
-*   **Need**: A system that is **Intelligent**, **Transparent**, and **User-Friendly**.
+*   **Subtlety**: Bias lies in word choice ("regime" vs "government"), not just facts.
+*   **Volume**: Too much news for manual fact-checking.
+*   **Trust**: Existing AI tools are "Black Boxes" – they give a verdict but no reason.
+*   **Goal**: Build a **Transparent** and **Explainable** detection system.
 
 ---
 
-## Slide 5: Introduction
+## Slide 5: Objectives
 
-*   **Context**: Media bias polarizes society and distorts public perception of reality.
-*   **Sophistication**: Modern bias is often linguistic (e.g., "regime" vs. "government"), requiring advanced NLP to detect.
-*   **Motivation**: To empower readers with a "digital truth lens."
-*   **Scope**: Focuses on English-language political and social news articles.
-
----
-
-## Slide 6: Objective
-
-*   **Build**: A robust, full-stack web application for bias analysis.
-*   **Detect**: Achieve high accuracy using fine-tuned Transformer models (RoBERTa).
-*   **Explain**: Integrate XAI (SHAP, LIME) to visualize feature importance.
-*   **Synthesize**: Use Generative AI to write human-readable bias reports.
+1.  **Detect**: Classify news as "Biased" or "Non-Biased" using **RoBERTa**.
+2.  **Explain**: Highlight biased words using **SHAP** and **LIME**.
+3.  **Narrate**: Generate natural language summaries using **Generative AI (Granite)**.
+4.  **Deploy**: Provide a user-friendly **React** interface.
 
 ---
 
-## Slide 7: Literature Survey
+## Slide 6: Literature Survey
 
-| Citation | Methodology | Research Gap |
+| Author (Year) | Method | Limitation |
 | :--- | :--- | :--- |
-| **Hamborg et al. (2019)** | Matrix factorization for framing detection. | Limited to political topics; no user-facing explanations. |
-| **Ribeiro et al. (2016)** | LIME for local model interpretability. | General purpose; not tuned for linguistic nuance in news. |
-| **Spinde et al. (2021)** | Deep Learning (LSTM/BERT) for classification. | High accuracy but lacks transparency ("Black Box"). |
+| **Hamborg et al. (2019)** | Matrix Factorization | Limited to political bias; no explanations. |
+| **Spinde et al. (2021)** | LSTM / BERT | High accuracy but "Black Box" nature. |
+| **Ribeiro et al. (2016)** | LIME | Good local explanation, but computationally expensive. |
+
+*   **Our Approach**: Combines **RoBERTa** (Accuracy) + **SHAP** (Global Explanation) + **LLM** (Readability).
 
 ---
 
-## Slide 8: System Architecture / Flow Diagram
+## Slide 7: System Requirements
 
-**(Insert Architecture Diagram Here)**
+**Hardware:**
+*   Processor: Intel i5 / Ryzen 5
+*   RAM: 8GB+
+*   GPU: NVIDIA GTX 1650 (Recommended for training)
 
-*   **Frontend**: React.js (User Interface).
-*   **Backend**: FastAPI (Model Serving).
-*   **Core Model**: RoBERTa (Classification).
-*   **XAI Engine**: SHAP & LIME (Feature Attribution).
-*   **Narrative Engine**: Ollama/Granite (Text Generation).
+**Software:**
+*   **Frontend**: React.js
+*   **Backend**: FastAPI (Python)
+*   **ML Models**: PyTorch, Transformers, SHAP
+*   **LLM**: Ollama (Granite 4:3b)
+
+---
+
+## Slide 8: System Architecture
+
+*(Placeholder for Architecture Diagram)*
+
+1.  **User Input**: Text/URL via React UI.
+2.  **API Gateway**: FastAPI routes request.
+3.  **Model Inference**: RoBERTa predicts probability.
+4.  **XAI Engine**: SHAP calculates feature importance.
+5.  **LLM Service**: Generates text explanation.
+6.  **Output**: Verdict + Heatmap + Summary.
 
 ---
 
 ## Slide 9: Methodology
 
-1.  **Data Collection**: Aggregated datasets (MBIC, BASIL) containing labeled biased/neutral articles.
-2.  **Preprocessing**: Tokenization, cleaning, and sequence truncation (512 tokens).
-3.  **Training**: Fine-tuned `roberta-base` with cross-entropy loss and AdamW optimizer.
-4.  **XAI Integration**: Implemented KernelSHAP and LimeTextExplainer for post-hoc analysis.
-5.  **Deployment**: Containerized application with a React frontend for real-time interaction.
+1.  **Preprocessing**:
+    *   Cleaning (HTML/Special chars).
+    *   Tokenization (RoBERTa Tokenizer).
+    *   Padding/Truncation (512 tokens).
+2.  **Training**:
+    *   Fine-tuned `roberta-base` on MBIC dataset.
+    *   Optimizer: AdamW.
+3.  **Explainability**:
+    *   **SHAP**: Assigns "contribution scores" to words.
+    *   **LIME**: Perturbs text to find local decision boundaries.
 
 ---
 
 ## Slide 10: System Testing
 
-| Input Snippet | Classification | Confidence |
-| :--- | :--- | :--- |
-| "The radical agenda is destroying our values." | **Biased** | **98.2%** |
-| "The committee met to discuss the budget." | **Legitimate** | **12.4%** |
-| "An absolute disaster of a policy." | **Biased** | **94.8%** |
-| "Scientists published the study results." | **Legitimate** | **8.1%** |
-| "The corrupt regime oppresses its people." | **Biased** | **96.5%** |
+| Test Case | Input Snippet | Expected | Actual | Result |
+| :--- | :--- | :--- | :--- | :--- |
+| **TC-01** | "The city council met at 10 AM." | Non-Biased | Non-Biased | **PASS** |
+| **TC-02** | "The radical left is destroying us." | Biased | Biased | **PASS** |
+| **TC-03** | "Corrupt regime oppresses people." | Biased | Biased | **PASS** |
 
 ---
 
 ## Slide 11: Results & Discussion
 
-*   **Performance**: Model achieves ~85% F1-Score, significantly outperforming keyword-based baselines.
-*   **Interpretability**: Heatmaps successfully identify subjective adjectives (e.g., "radical", "corrupt") as bias triggers.
-*   **User Feedback**: The "Explain with AI" feature (LLM narrative) was rated highly for making technical data understandable.
+*   **Performance**:
+    *   **Accuracy**: ~85%
+    *   **F1-Score**: 0.85
+*   **Inference Speed**: < 1 second per article.
+*   **Visualization**: Heatmaps successfully identify subjective adjectives (e.g., "radical", "disaster").
 
 ---
 
-## Slide 12: Demonstration of Prototype
+## Slide 12: Snapshots
 
-**(Insert Screenshots of the Tool)**
+*(Placeholder for UI Screenshots)*
 
-*   **Input**: User pastes text.
-*   **Analysis**: System processes in <1 second.
-*   **Output**:
-    *   **Verdict**: "Biased" (Red) / "Non-Biased" (Green).
-    *   **Heatmap**: Visual highlights of biased words.
-    *   **Report**: AI-written summary of the findings.
-
----
-
-## Slide 13: Future Works
-
-*   **Multi-Language**: Support for Hindi, Kannada, and other regional languages.
-*   **Browser Extension**: Analyze news directly on sites like Times of India or CNN.
-*   **Video/Audio**: Analyze bias in TV news debates using Speech-to-Text.
-*   **Crowdsourcing**: Allow users to flag incorrect predictions to retrain the model.
+*   **Home Page**: Simple text area for input.
+*   **Results Page**:
+    *   **Gauge Chart**: Shows Bias Probability.
+    *   **Text Highlight**: Red color for biased words.
+    *   **AI Summary**: "This article uses emotional language..."
 
 ---
 
-## Slide 14: Conclusion
+## Slide 13: Conclusion
 
-*   **Summary**: We successfully built an end-to-end system for detecting and explaining media bias.
-*   **Innovation**: The combination of **Deep Learning** (RoBERTa) and **Generative AI** (LLM Explanations) sets this project apart.
-*   **Social Good**: Provides a crucial tool for fighting misinformation and promoting critical thinking.
+*   The system effectively bridges the gap between **High-Performance AI** and **Human Understandability**.
+*   It empowers users to consume news critically by showing *where* and *why* bias exists.
+
+---
+
+## Slide 14: Future Scope
+
+*   **Multilingual Support**: Hindi, Kannada, Spanish.
+*   **Browser Extension**: Real-time analysis while browsing.
+*   **Video/Audio Analysis**: For TV news debates.
 
 ---
 
 ## Slide 15: References
 
-1.  Liu, Y., et al. "RoBERTa: A Robustly Optimized BERT Pretraining Approach." (2019).
-2.  Lundberg, S. M., & Lee, S. I. "A Unified Approach to Interpreting Model Predictions." (2017).
-3.  Hamborg, F., et al. "Automated identification of media bias in news articles." (2019).
-4.  Vaswani, A., et al. "Attention Is All You Need." (2017).
+1.  Liu et al., "RoBERTa: A Robustly Optimized BERT Pretraining Approach".
+2.  Lundberg & Lee, "A Unified Approach to Interpreting Model Predictions" (SHAP).
+3.  Hamborg et al., "Automated identification of media bias".
+
+---
+
+# THANK YOU
+
+
+---
+
+## Content
+
+1.  Abstract
+2.  Problem Statement
+3.  Introduction
+4.  Objective
+5.  Literature Survey
+6.  System Architecture / Flow Diagram
+7.  Methodology
+8.  System Testing
+9.  Results Discussion
+10. Demonstration of Prototype
+11. Future Works
+12. Conclusion
+13. References
+
+---
+
+## Abstract
+
+*   Traditional media literacy tools fail against the speed and subtlety of modern digital bias.
+*   AI-powered detection using **RoBERTa** (Transformer) with **Attention Mechanism** and **Explainable AI (XAI)** via a React/FastAPI web interface.
+*   Provides protection with high accuracy, safeguarding users from misinformation and manipulation.
+
+---
+
+## Problem Statement
+
+*   Media bias is a widespread issue impacting public opinion globally.
+*   Traditional manual fact-checking often fails to detect subtle linguistic framing and tone.
+*   Need for intelligent, adaptable, and transparent detection solutions.
+
+---
+
+## Introduction
+
+*   Biased news exploits reader trust via deceptive framing and word choice.
+*   Increasing sophistication of polarization requires advanced defense.
+*   **Motivation**: Protect users from manipulation and echo chambers.
+*   Valid and urgent in the current digital era. Scope includes individuals, researchers, and media organizations.
+
+---
+
+## Objective
+
+*   Build an effective, AI-powered media bias detection system.
+*   Ensure high accuracy and low false positives in bias classification.
+*   Provide **explainable insights** (Why is it biased?) using SHAP and LIME.
+
+---
+
+## Literature Survey
+
+| Sl No. | Citations | Methodologies | Research Gaps |
+| :--- | :--- | :--- | :--- |
+| 01 | *Hamborg et al. (2019)* - "Automated identification of media bias in news articles" | Matrix factorization and word embeddings to detect slanted framing. | Focuses on political bias only; lacks user-friendly explanations for *why* a text is biased. |
+| 02 | *Spinde et al. (2021)* - "Media Bias Detection using Deep Learning" | Compares LSTM vs. BERT for bias classification. | High accuracy but operates as a "black box" with no transparency for the end-user. |
+| 03 | *Ribeiro et al. (2016)* - "Why Should I Trust You?" | LIME for local interpretability of black-box models. | General-purpose XAI; not specifically optimized for the nuances of media bias detection. |
+
+---
+
+## System Architecture / Flow Diagram
+
+![System Architecture Diagram](architecture_diagram.png)
+
+*   **Input**: News Article Text/URL.
+*   **Preprocessing**: Tokenization, Cleaning.
+*   **Model**: RoBERTa Transformer.
+*   **Explanation**: SHAP/LIME/Attention.
+*   **Output**: Bias Verdict + Narrative Report.
+
+---
+
+## Methodology
+
+*   Collect **MBIC (Media Bias Identification Benchmark)** dataset for training.
+*   Preprocess article text, build vocabulary (RoBERTa Tokenizer).
+*   Train deep learning model with class balancing and regularization.
+*   Deploy **FastAPI**-based backend and **React** frontend for real-time detection.
+*   Use **Ollama (Granite 4:3b)** for generating natural language explanations.
+
+---
+
+## System Testing
+
+| Sample Article Input | Classification | Confidence Score |
+| :--- | :--- | :--- |
+| "The radical left's agenda is destroying our traditional values and ruining the economy." | **Biased** | **98.2%** |
+| "The city council met yesterday to discuss the new budget proposal for the upcoming fiscal year." | **Non-Biased** | **12.4%** |
+| "The corrupt regime continues to oppress its citizens without mercy, ignoring international calls for peace." | **Biased** | **96.5%** |
+| "Scientists published a study linking high sugar intake to increased health risks in adults." | **Non-Biased** | **8.1%** |
+| "An absolute disaster of a policy that will surely lead to the downfall of our great nation." | **Biased** | **94.8%** |
+
+---
+
+## Results Discussion
+
+![Confusion Matrix / Accuracy Graph](results_graph.png)
+
+*   The model achieves **~85% Accuracy** on the test set.
+*   **SHAP Heatmaps** successfully highlight subjective adjectives (e.g., "radical", "corrupt").
+*   Inference time optimized to **<1 second** using CUDA acceleration.
+
+---
+
+## Demonstration of Prototype
+
+![Screenshot of React Frontend](demo_screenshot.png)
+
+*   **User Interface**: Clean input box for text.
+*   **Analysis View**: Real-time "Biased" vs "Non-Biased" gauge.
+*   **Explainability**: "Explain with AI" button generates a readable report.
+
+---
+
+## Future Works
+
+*   Expand dataset to include **multi-language support** (Hindi, Spanish).
+*   Integrate with **browser extensions** for real-time analysis on news sites.
+*   Improve model with larger **LLM-based** architectures for nuance detection.
+
+---
+
+## Conclusion
+
+*   **Media Bias Analysis System** provides robust, real-time bias detection.
+*   Harnesses advanced **AI and XAI** to safeguard users effectively.
+*   Promotes critical thinking and media literacy in the digital age.
+
+---
+
+## References
+
+1.  Liu, Y., et al. "RoBERTa: A Robustly Optimized BERT Pretraining Approach." arXiv preprint arXiv:1907.11692 (2019).
+2.  Lundberg, S. M., & Lee, S. I. "A Unified Approach to Interpreting Model Predictions." NeurIPS (2017).
+3.  Hamborg, F., Donnay, K., & Gipp, B. "Automated identification of media bias in news articles." International Journal on Digital Libraries (2019).
 
 ---
 
