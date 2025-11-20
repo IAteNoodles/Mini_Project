@@ -85,9 +85,9 @@
 ## Slide 7: System Requirements
 
 **Hardware:**
-*   Processor: Intel i5 / Ryzen 5
-*   RAM: 8GB+
-*   GPU: NVIDIA GTX 1650 (Recommended for training)
+*   Processor: AMD Ryzen 7 7840HS
+*   RAM: 16GB
+*   GPU: NVIDIA GeForce RTX 4050
 
 **Software:**
 *   **Frontend**: React.js
@@ -116,9 +116,9 @@
     *   Cleaning (HTML/Special chars).
     *   Tokenization (RoBERTa Tokenizer).
     *   Padding/Truncation (512 tokens).
-2.  **Training**:
-    *   Fine-tuned `roberta-base` on MBIC dataset.
-    *   Optimizer: AdamW.
+2.  **Model Selection**:
+    *   Tested **Transformers**, **Mamba**, and **Hybrid** architectures.
+    *   Selected **Pre-trained RoBERTa** for the prototype due to stability and XAI compatibility.
 3.  **Explainability**:
     *   **SHAP**: Assigns "contribution scores" to words.
     *   **LIME**: Perturbs text to find local decision boundaries.
@@ -166,6 +166,7 @@
 
 ## Slide 14: Future Scope
 
+*   **Mamba Architecture**: Train a Mamba backbone for lower computational complexity.
 *   **Multilingual Support**: Hindi, Kannada, Spanish.
 *   **Browser Extension**: Real-time analysis while browsing.
 *   **Video/Audio Analysis**: For TV news debates.

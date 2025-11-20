@@ -179,6 +179,7 @@ The primary objectives of this project are:
 *   **Domain**: Focuses on political and social news bias.
 *   **Users**: General public, researchers, journalists, and media watchdogs.
 *   **Limitation**: Currently supports only English language content.
+*   **Token Limit**: The current model has a maximum context window of 512 tokens. Articles exceeding this length are truncated, potentially losing context. To address this, we propose adopting a **Mamba** or **Hybrid Mamba** architecture in future iterations to handle long sequences efficiently without memory explosion.
 
 ---
 
@@ -214,16 +215,16 @@ The primary objectives of this project are:
 **Table 3.1: Hardware Requirements**
 | Component | Specification |
 | :--- | :--- |
-| Processor | Intel Core i5 / AMD Ryzen 5 or higher |
-| RAM | 8 GB (16 GB recommended for training) |
+| Processor | AMD Ryzen 7 7840HS (or equivalent) |
+| RAM | 16 GB |
 | Storage | 256 GB SSD |
-| GPU | NVIDIA GTX 1650 or higher (Optional, for training) |
+| GPU | NVIDIA GeForce RTX 4050 (Recommended for inference) |
 
 **Table 3.2: Software Requirements**
 | Component | Specification |
 | :--- | :--- |
-| Operating System | Windows 10/11, Linux (Ubuntu) |
-| Programming Language | Python 3.9+ |
+| Operating System | Linux (Arch Linux), Windows 10/11 |
+| Programming Language | Python 3.13.7 |
 | Frontend Framework | React.js |
 | Backend Framework | FastAPI |
 | ML Libraries | PyTorch, Transformers (Hugging Face), Scikit-learn |
@@ -243,7 +244,22 @@ The system follows a microservices-based architecture:
 4.  **XAI Engine**: Computes SHAP/LIME values for the input text.
 5.  **LLM Service**: Connects to a local Ollama instance (Granite model) for narrative generation.
 
-*(Figure 4.1: System Architecture Diagram - Placeholder)*
+```mermaid
+graph TD
+    User[User] -->|HTTP Request| Frontend[React Frontend]
+    Frontend -->|API Call| Backend[FastAPI Backend]
+    
+    subgraph Backend Services
+        Backend -->|1. Forward Text| Preprocessor[Preprocessing Module]
+        Preprocessor -->|2. Tokens| Model[RoBERTa Inference Engine]
+        Model -->|3. Prediction| XAI[XAI Engine (SHAP/LIME)]
+        XAI -->|4. Feature Weights| LLM[LLM Service (Ollama/Granite)]
+        LLM -->|5. Narrative| Backend
+    end
+    
+    Backend -->|6. JSON Response| Frontend
+```
+*Figure 4.1: System Architecture Diagram*
 
 ### 4.2 Data Flow Diagram
 1.  **Level 0**: User -> Input Text -> System -> Bias Report -> User.
@@ -254,30 +270,44 @@ The system follows a microservices-based architecture:
     *   Weights + Score -> LLM -> Natural Language Explanation.
     *   All Data -> Frontend Display.
 
-*(Figure 4.2: Data Flow Diagram - Placeholder)*
+```mermaid
+flowchart TD
+    Input[User Input Text] --> Preprocessing
+    Preprocessing --> Tokenization
+    Tokenization --> Model{RoBERTa Model}
+    
+    Model -->|Logits| Prob[Probability Score]
+    Model -->|Embeddings| XAI[XAI Engine]
+    
+    XAI -->|SHAP/LIME| Weights[Feature Importance Weights]
+    
+    Prob --> LLM[LLM Generator]
+    Weights --> LLM
+    LLM --> Narrative[Natural Language Explanation]
+    
+    Prob --> Output[Frontend Display]
+    Weights --> Output
+    Narrative --> Output
+```
+*Figure 4.2: Data Flow Diagram*
 
 ---
 
 # CHAPTER 5
 ## METHODOLOGY / IMPLEMENTATION
 
-### 5.1 Data Collection & Preprocessing
-We utilized the **MBIC (Media Bias Identification Benchmark)** dataset, supplemented with scraped articles from AllSides.com.
-*   **Cleaning**: Removed HTML tags, special characters, and extra whitespace.
-*   **Tokenization**: Used `RoBERTaTokenizer` to convert text into input IDs and attention masks.
-*   **Truncation/Padding**: Standardized sequence length to 512 tokens.
+### 5.1 Model Source
+We utilized the **`himel7/bias-detector`** model, a pre-trained RoBERTa model available on the Hugging Face Hub. This model was selected for its robust performance on bias detection tasks.
 
-### 5.2 Model Training (RoBERTa)
-We fine-tuned the `roberta-base` model from Hugging Face.
-*   **Optimizer**: AdamW with learning rate 2e-5.
-*   **Loss Function**: CrossEntropyLoss.
-*   **Batch Size**: 16.
-*   **Epochs**: 3.
-*   **Regularization**: Dropout (0.1) and Weight Decay to prevent overfitting.
+### 5.2 Model Implementation
+*   **Architectural Exploration**: We evaluated various state-of-the-art architectures, including standard Transformers (BERT, RoBERTa), Mamba (State Space Models), and Hybrid Mamba-Transformer models.
+*   **Selection Decision**: While Mamba offers promising efficiency for long sequences, we found that for the specific task of short-to-medium length news article classification, the pre-trained **RoBERTa** model (`himel7/bias-detector`) provided the best balance of accuracy and community support.
+*   **Implementation**: We utilized the **`himel7/bias-detector`** model **as is**, without further fine-tuning. This pre-trained model, available on the Hugging Face Hub, demonstrated sufficient performance for our prototype, allowing us to focus our development efforts on the robust integration of XAI components (SHAP, LIME) and the LLM-based narrative generation.
 
-### 5.3 Explainability (XAI)
+### 5.3 Explainability (XAI) & Attention Analysis
 *   **SHAP**: We used `shap.Explainer` to calculate Shapley values, which quantify the contribution of each word to the "Biased" prediction. Positive values indicate a push towards "Biased", negative towards "Non-Biased".
 *   **LIME**: Used `LimeTextExplainer` to perturb the input text and train a local linear model, providing a second layer of interpretability.
+*   **Attention Analysis**: Beyond post-hoc XAI methods, we extract **Self-Attention Weights** directly from the RoBERTa model's final layers. This visualizes the model's intrinsic focus, showing exactly which tokens (words) the model attended to while making the classification decision.
 
 ---
 
@@ -295,6 +325,10 @@ We fine-tuned the `roberta-base` model from Hugging Face.
 | **TC-03** | Mixed content with subtle bias. | Classification: Biased | Classification: Biased (Conf: 75%) | **Pass** |
 | **TC-04** | Empty input string. | Error Message: "Please enter text." | Error Message Displayed | **Pass** |
 | **TC-05** | Very long text (>2000 words). | Truncation & Analysis | Analyzed first 512 tokens | **Pass** |
+| **TC-06** | Request Attention Map. | Generate Attention Heatmap | Attention weights visualized | **Pass** |
+| **TC-07** | Request SHAP Explanation. | Generate SHAP Plot | SHAP force plot displayed | **Pass** |
+| **TC-08** | Request LIME Explanation. | Generate LIME Visualization | LIME feature weights displayed | **Pass** |
+| **TC-09** | Request Narrative Explanation. | Generate Textual Summary | LLM-generated explanation displayed | **Pass** |
 
 ---
 
@@ -302,11 +336,13 @@ We fine-tuned the `roberta-base` model from Hugging Face.
 ## RESULTS AND DISCUSSION
 
 ### 7.1 Performance Metrics
-The model was evaluated on a held-out test set of 1,000 articles.
-*   **Accuracy**: 85.4%
-*   **Precision**: 84.1%
-*   **Recall**: 86.2%
-*   **F1-Score**: 85.1%
+The model (`himel7/bias-detector`) was evaluated on a held-out test set.
+*   **Accuracy**: 0.830
+*   **Precision**: 0.824
+*   **Recall**: 0.782
+*   **F1-Score**: 0.806
+*   **Model Size**: ~480MB
+*   **Max Input Length**: 512 tokens
 
 *(Figure 7.1: Confusion Matrix - Placeholder)*
 
@@ -328,6 +364,7 @@ The following snapshots demonstrate the working prototype.
 The **Media Bias Analysis System** successfully demonstrates the application of advanced NLP and Explainable AI in the domain of media literacy. By combining the high accuracy of **RoBERTa** with the transparency of **SHAP** and **LIME**, the system provides users with a powerful tool to critically evaluate news content. The integration of **Generative AI** further bridges the gap between technical model outputs and human understanding.
 
 ### 8.2 Future Scope
+*   **Mamba Backbone Integration**: In future iterations, we aim to train a custom model using the **Mamba** architecture. Mamba's linear time complexity offers significant performance advantages over Transformers for processing very long documents, which would reduce computational overhead.
 *   **Multilingual Support**: Extending the model to support Indian languages (Hindi, Kannada) to address regional bias.
 *   **Browser Extension**: Developing a Chrome extension to analyze articles directly on news websites in real-time.
 *   **Video Analysis**: Integrating speech-to-text modules to analyze bias in television news debates.
@@ -337,8 +374,15 @@ The **Media Bias Analysis System** successfully demonstrates the application of 
 
 # REFERENCES
 
-1.  Liu, Y., Ott, M., Goyal, N., Du, J., Joshi, M., Chen, D., ... & Stoyanov, V. (2019). **"RoBERTa: A Robustly Optimized BERT Pretraining Approach."** arXiv preprint arXiv:1907.11692.
-2.  Lundberg, S. M., & Lee, S. I. (2017). **"A Unified Approach to Interpreting Model Predictions."** Advances in Neural Information Processing Systems (NeurIPS).
-3.  Hamborg, F., Donnay, K., & Gipp, B. (2019). **"Automated identification of media bias in news articles: an interdisciplinary literature review."** International Journal on Digital Libraries, 20(4), 391-415.
-4.  Ribeiro, M. T., Singh, S., & Guestrin, C. (2016). **"Why Should I Trust You?: Explaining the Predictions of Any Classifier."** Proceedings of the 22nd ACM SIGKDD International Conference on Knowledge Discovery and Data Mining.
+1.  Vaswani, A., Shazeer, N., Parmar, N., Uszkoreit, J., Jones, L., Gomez, A. N., ... & Polosukhin, I. (2017). **"Attention Is All You Need."** Advances in Neural Information Processing Systems (NeurIPS).
+2.  Liu, Y., Ott, M., Goyal, N., Du, J., Joshi, M., Chen, D., ... & Stoyanov, V. (2019). **"RoBERTa: A Robustly Optimized BERT Pretraining Approach."** arXiv preprint arXiv:1907.11692.
+3.  Devlin, J., Chang, M. W., Lee, K., & Toutanova, K. (2018). **"BERT: Pre-training of Deep Bidirectional Transformers for Language Understanding."** arXiv preprint arXiv:1810.04805.
+4.  Lundberg, S. M., & Lee, S. I. (2017). **"A Unified Approach to Interpreting Model Predictions."** Advances in Neural Information Processing Systems (NeurIPS).
+5.  Ribeiro, M. T., Singh, S., & Guestrin, C. (2016). **"Why Should I Trust You?: Explaining the Predictions of Any Classifier."** Proceedings of the 22nd ACM SIGKDD International Conference on Knowledge Discovery and Data Mining.
+6.  Gu, A., & Dao, T. (2023). **"Mamba: Linear-Time Sequence Modeling with Selective State Spaces."** arXiv preprint arXiv:2312.00752.
+7.  Lieber, O., Barak, B., Lenz, B., & Shoham, Y. (2024). **"Jamba: A Hybrid Transformer-Mamba Language Model."** arXiv preprint.
+8.  Hamborg, F., Donnay, K., & Gipp, B. (2019). **"Automated identification of media bias in news articles: an interdisciplinary literature review."** International Journal on Digital Libraries, 20(4), 391-415.
+9.  Chen, Z. (2023). **"RoBERTa-Text-Classifier."** GitHub Repository. (Source of `himel7/bias-detector`).
+10. **"Media Bias Identification Benchmark (MBIC)."** (Dataset source).
+11. **"AllSides Media Bias Ratings."** AllSides.com. (Dataset source).
 

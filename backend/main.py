@@ -226,7 +226,7 @@ def get_news(q: str):
                             )
 
 # --- Bias Analysis Logic ---
-LLM_MODEL_NAME = "granite4:3b"
+LLM_MODEL_NAME = "granite4:micro-h"
 TOP_FACTOR_LIMIT = 5
 
 def _format_contributions_for_prompt(df: pd.DataFrame, value_column: str, limit: int = 15) -> str:

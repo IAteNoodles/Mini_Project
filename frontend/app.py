@@ -11,7 +11,7 @@ import streamlit as st
 import streamlit.components.v1 as components
 from bias_detector import BiasDetector, get_detector
 
-LLM_MODEL_NAME = "granite4:3b"
+LLM_MODEL_NAME = "granite4:micro-h"
 TOP_FACTOR_LIMIT = 5
 
 st.set_page_config(page_title="Bias Detector", page_icon="📰", layout="wide")
